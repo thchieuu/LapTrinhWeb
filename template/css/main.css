@@ -6138,7 +6138,10 @@ h6 {
 }
 
 .brand-slider .brand-image img {
-    margin: 0 auto;
+    flex:auto;
+
+    width:500px;
+    height: 400px;
 }
 
 .brand-slider button.slick-arrow {
@@ -7246,8 +7249,17 @@ h6 {
     }
 }
 
-.header-widget-2 .call-widget {
-    padding-bottom: 10px;
+
+.site-wrapper .call-widget {
+    float: right;
+    position: relative;
+    top:10px;
+    left:37.5rem;
+
+}
+.site-wrapper .header-links{
+    float:left;
+
 }
 
 .call-widget {
