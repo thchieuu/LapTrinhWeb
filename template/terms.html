@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="css/plugins.css" />
         <link rel="stylesheet" href="css/main.css" />
         <link rel="shortcut icon" type="image/x-icon" href="image/favicon.ico">
-        <title>Petmark ❤️</title>
+        <title>Petmark - Pet Care & Veterinary Bootstrap Template</title>
     </head>
     <body class="">
         <div class="site-wrapper">
@@ -64,11 +64,12 @@
                     <div class="container">
                         <div class="header-bottom-inner">
                             <div class="row g-0">
+                                
                                 <!-- Main Menu -->
                                 <div class="col-lg-7 d-none d-lg-block">
                                     <nav class="main-navigation l-widget">
                                         <!-- Mainmenu Start -->
-                                        <ul class="mainmenu" >
+                                        <ul class="mainmenu">
                                             <li class="mainmenu__item  ">
                                                 <a href="index.html" class="mainmenu__link">Trang chủ</a>
                                             </li>
@@ -87,7 +88,8 @@
                                             <li class="mainmenu__item ">
                                                 <a href="blog-list-left-sidebar.html" class="mainmenu__link">Tin tức</a>
                                             </li>
-
+                                            
+                                            
                                         </ul>
                                         <!-- Mainmenu End -->
                                     </nav>
@@ -183,185 +185,138 @@
                 <div class="container">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Thanh toán</li>
+                        <li class="breadcrumb-item active" aria-current="page">Điều khoản dịch vụ</li>
                     </ol>
                 </div>
             </nav>
-            <main id="content" class="page-section sp-inner-page checkout-area-padding space-db--20">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <!-- Checkout Form s-->
-                            <div class="checkout-form">
-                                <div class="row row-40">
-                                    <div class="col-12">
-                                        <h1 class="quick-title">Thanh toán</h1>
-                                        <!-- Slide Down Trigger  -->
-                                        <div class="checkout-quick-box">
-                                            <p><i class="far fa-sticky-note"></i>Phản hồi khách hàng? <a href="javascript:" class="slide-trigger" data-bs-target="#quick-login">Đăng nhập</a></p>
-                                        </div>
-                                        <!-- Slide Down Blox ==> Login Box  -->
-                                        <div class="checkout-slidedown-box" id="quick-login">
-                                            <form action="https://htmldemo.net/petmark/petmark/">
-                                                <div class="quick-login-form">
-                                                    <p>Nếu bạn đã mua sắm với chúng tôi trước đây, vui lòng nhập thông tin chi tiết của bạn vào ô bên dưới. Nếu bạn là khách hàng mới, vui lòng chuyển sang phần Lập hóa đơn & Giao hàng.</p>
-                                                    <div class="form-group">
-                                                        <label for="quick-user">Username or email *</label>
-                                                        <input type="text" placeholder="">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="quick-user">Password *</label>
-                                                        <input type="text" placeholder="">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <div class="d-flex align-items-center">
-                                                            <a href="#" class="btn btn-black">Đăng nhập</a>
-                                                            <div class="d-inline-flex align-items-center  ms-3">
-                                                                <input type="checkbox" id="accept_terms" class="mb-0 me-1">
-                                                                <label for="accept_terms" class="mb-0">Tôi đã đọc và chấp nhận các điều khoản & điều kiện</label>
-                                                            </div>
-                                                        </div>
-                                                        <p><a href="javascript:" class="pass-lost mt-3">Quên mật khẩu?</a></p>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                        <!-- Slide Down Trigger  -->
-                                        <div class="checkout-quick-box">
-                                            <p><i class="far fa-sticky-note"></i> Mã giảm giá? <a href="javascript:" class="slide-trigger" data-bs-target="#quick-cupon">
-                                            Nhấn để nhận mã</a></p>
-                                        </div>
-                                        <!-- Slide Down Blox ==> Cupon Box -->
-                                        <div class="checkout-slidedown-box" id="quick-cupon">
-                                            <form action="https://htmldemo.net/petmark/petmark/">
-                                                <div class="checkout_coupon">
-                                                    <input type="text" class="mb-0" placeholder="Mã giảm giá">
-                                                    <a href="#" class="btn btn-black">Xác nhận</a>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-7 mb--20">
-                                        <!-- Billing Address -->
-                                        <div id="billing-form" class="mb-40">
-                                            <h4 class="checkout-title">Địa chỉ thanh toán</h4>
-                                            <div class="row">
-                                                <div class="col-md-6 col-12 mb--20">
-                                                    <label>Họ*</label>
-                                                    <input type="text" placeholder="Họ">
-                                                </div>
-                                                <div class="col-md-6 col-12 mb--20">
-                                                    <label>Tên*</label>
-                                                    <input type="text" placeholder="Tên">
-                                                </div>
-                                               <!-- <div class="col-12 mb&#45;&#45;20">
-                                                    <label>Tên công ty</label>
-                                                    <input type="text" placeholder="Tên công ty">
-                                                </div>-->
-                                                <div class="col-12 col-12 mb--20">
-                                                    <label>Tỉnh/Thành phố*</label>
-                                                    <input type="text" placeholder="Tên Tỉnh/Thành phố">
-                                                   <!-- <select class="nice-select">
-                                                        <option>Tp.Hồ Chí Minh</option>
-                                                        <option>Hà Nội</option>
-                                                        <option>Đà Nẳng</option>
-                                                        <option>Cần Thơ</option>
-                                                        <option>Gia Lai</option>
-                                                    </select>-->
-                                                </div>
-                                                <div class="col-md-6 col-12 mb--20">
-                                                    <label>Email*</label>
-                                                    <input type="email" placeholder="Email">
-                                                </div>
-                                                <div class="col-md-6 col-12 mb--20">
-                                                    <label>Số điện thoại*</label>
-                                                    <input type="text" placeholder="Số điện thoại">
-                                                </div>
-                                                <div class="col-12 mb--20">
-                                                    <label>Địa chỉ*</label>
-                                                    <input type="text" placeholder="Địa chỉ">
-                                                </div>
-                                                <div class="col-md-6 col-12 mb--20">
-                                                    <label>Mã khuyến mãi</label>
-                                                    <input type="text" placeholder="Mã khuyến mãi">
-                                                </div>
-                                                <div class="col-12 mb--20 ">
-                                                    <div class="block-border check-bx-wrapper">
-                                                        <!--<div class="check-box">
-                                                            <input type="checkbox" id="create_account">
-                                                            <label for="create_account">Đăng kí tài khoản?</label>
-                                                        </div>-->
-                                                        <!--<div class="check-box">
-                                                            <input type="checkbox" id="shiping_address" data-shipping>
-                                                            <label for="shiping_address">Vận chuyển đến địa chỉ khác</label>
-                                                        </div>-->
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Shipping Address -->
-                                        <div id="shipping-form" class="mb--40">
-                                            <h4 class="checkout-title">Địa chỉ mới</h4>
-                                            <div class="row">
-                                                <div class="col-md-6 col-12 mb--20">
-                                                    <label>Họ*</label>
-                                                    <input type="text" placeholder="Họ">
-                                                </div>
-                                                <div class="col-md-6 col-12 mb--20">
-                                                    <label>Tên*</label>
-                                                    <input type="text" placeholder="Tên">
-                                                </div>
-                                                <div class="col-md-6 col-12 mb--20">
-                                                    <label>Email*</label>
-                                                    <input type="email" placeholder="Email">
-                                                </div>
-                                                <div class="col-md-6 col-12 mb--20">
-                                                    <label>Phone*</label>
-                                                    <input type="text" placeholder="Phone">
-                                                </div>
-                                                <div class="col-12 mb--20">
-                                                    <label>Địa chỉ mới*</label>
-                                                    <input type="text" placeholder="Địa chỉ">
-                                                </div>
-                                                <div class="col-md-6 col-12 mb--20">
-                                                    <label>Mã zip*</label>
-                                                    <input type="text" placeholder="Mã zip">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="order-note-block mt--30">
-                                            <label for="order-note" >Ghi chú</label>
-                                            <textarea id="order-note" cols="30" rows="10" class="order-note" placeholder="Ghi chú"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-5">
-                                        <div class="row">
-                                            <!-- Cart Totall -->
-                                            <div class="col-12">
-                                                <div class="checkout-cart-total">
-                                                    <h2 class="checkout-title">Đơn hàng của bạn</h2>
-                                                    <h4>Sản Phẩm <span>Tổng giá</span></h4>
-                                                    <ul>
-                                                        <li><span class="left">500 VND</span> <span class="right">20.000 VND</span></li>
-                                                        <li><span class="left">10 Đồng VNCH </span><span class="right">30.000 VND</span></li>
-                                                        <li><span class="left">50 Đồng VNCH</span> <span class="right">30.000 VND</span></li>
-                                                        <li><span class="left">5 Hào</span> <span class="right">50.000 VND</span></li>
-                                                    </ul>
-                                                    <p> Tổng tiền <span>130.000 VND</span></p>
-                                                    <p>Phí vận chuyển <span>11.500 VND</span></p>
-                                                    <h4>Tổng cộng <span>145.000 VND</span></h4>
-                                                    
-                                                    <div class="term-block">
-                                                        <input type="checkbox" id="accept_terms2">
-                                                        <label for="accept_terms2">Tôi đã đọc và chấp nhận các điều khoản & điều kiện</label>
-                                                    </div>
-                                                    <button class="place-order w-100">Đặt hàng</button>
-                                                </div>
-                                            </div>
-                                        </div>
+            <!-- Main Wrapper Start -->
+            <main id="content" class="main-content-wrapper overflow-hidden">
+                <div class="faq-section">
+                    <div class="container">
+                        <header class="section-header">
+                            <h2>điều khoản dịch vụ</h2>
+                            <span>Khi quý khách truy cập vào trang web của chúng tôi có nghĩa là quý khách đồng ý
+                                với các điều khoản này. Trang web có quyền thay đổi, chỉnh sửa,
+                                thêm hoặc lược bỏ bất kỳ phần nào trong Quy định và Điều kiện sử dụng, vào bất cứ lúc nào.
+                                Các thay đổi có hiệu lực ngay khi được đăng trên trang web mà không cần thông báo trước.
+                                Và khi quý khách tiếp tục sử dụng trang web, sau khi các thay đổi về quy định và điều kiện
+                                được đăng tải, có nghĩa là quý khách chấp nhận với những thay đổi đó.<br><br>
+                                Quý khách vui lòng kiểm tra thường xuyên để cập nhật những thay đổi của chúng tôi.</span>
+                        </header>
+                        <article class="section-article">
+                            <h4>Dưới đây là những điều khoản dịch vụ, bạn có thể tìm thấy câu trả lời cho mình.</h4>
+                        </article>
+                        <!-- Site Faq -->
+                        <div class="site-faq-accordion accordion" id="accordionExample">
+                            <div class="card">
+                                <div class="card-header" id="headingThree">
+                                    <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                    aria-expanded="false" aria-controls="collapseThree">
+                                   1. Hướng dẫn sử dụng web
+                                    </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        - Khi vào web của chúng tôi, người dùng tối thiểu phải 18 tuổi hoặc truy cập dưới sự giám sát của cha mẹ hay người giám hộ hợp pháp.<br><br>
+
+                                        - Chúng tôi cấp giấy phép sử dụng để bạn có thể mua sắm trên web trong khuôn khổ điều khoản và điều kiện sử dụng đã đề ra.<br><br>
+
+                                        - Nghiêm cấm sử dụng bất kỳ phần nào của trang web này với mục đích thương mại hoặc nhân danh bất kỳ đối tác thứ ba nào nếu không được chúng tôi cho phép bằng văn bản. Nếu vi phạm bất cứ điều nào trong đây, chúng tôi sẽ hủy giấy phép của bạn mà không cần báo trước.<br><br>
+
+                                        - Trang web này chỉ dùng để cung cấp thông tin sản phẩm chứ chúng tôi không phải nhà sản xuất nên những nhận xét hiển thị trên web là ý kiến cá nhân của khách hàng, không phải của chúng tôi.<br><br>
+
+                                        - Quý khách phải đăng ký tài khoản với thông tin xác thực về bản thân và phải cập nhật nếu có bất kỳ thay đổi nào. Mỗi người truy cập phải có trách nhiệm với mật khẩu, tài khoản và hoạt động của mình trên web. Hơn nữa, quý khách phải thông báo cho chúng tôi biết khi tài khoản bị truy cập trái phép. Chúng tôi không chịu bất kỳ trách nhiệm nào, dù trực tiếp hay gián tiếp, đối với những thiệt hại hoặc mất mát gây ra do quý khách không tuân thủ quy định.<br><br>
+
+                                        - Trong suốt quá trình đăng ký, quý khách đồng ý nhận email quảng cáo từ website. Sau đó, nếu không muốn tiếp tục nhận mail, quý khách có thể từ chối bằng cách nhấp vào đường link ở dưới cùng trong mọi email quảng cáo.
                                     </div>
                                 </div>
                             </div>
+                            <div class="card">
+                                <div class="card-header" id="headingFive">
+                                    <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive"
+                                    aria-expanded="false" aria-controls="collapseFive">
+                                        2. Chấp nhận đơn hàng và giá cả
+                                    </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <p>- Chúng tôi có quyền từ chối hoặc hủy đơn hàng của quý khách vì bất kỳ lý do gì vào bất kỳ lúc nào. Chúng tôi có thể hỏi thêm về số điện thoại và địa chỉ trước khi nhận đơn hàng.</p>
+                                        <P>- Chúng tôi cam kết sẽ cung cấp thông tin giá cả chính xác nhất cho người tiêu dùng. Tuy nhiên, đôi lúc vẫn có sai sót xảy ra, ví dụ như trường hợp giá sản phẩm không hiển thị chính xác trên trang web hoặc sai giá, tùy theo từng trường hợp chúng tôi sẽ liên hệ hướng dẫn hoặc thông báo hủy đơn hàng đó cho quý khách. Chúng tôi cũng có quyền từ chối hoặc hủy bỏ bất kỳ đơn hàng nào dù đơn hàng đó đã hay chưa được xác nhận hoặc đã bị thanh toán.</P>
+                                       <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingTwo">
+                                    <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                    aria-expanded="false" aria-controls="collapseTwo">
+                                        3. Thương hiệu và bản quyền
+                                    </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <p>- Mọi quyền sở hữu trí tuệ (đã đăng ký hoặc chưa đăng ký), nội dung thông tin và tất cả các thiết kế, văn bản, đồ họa, phần mềm, hình ảnh, video, âm nhạc, âm thanh, biên dịch phần mềm, mã nguồn và phần mềm cơ bản đều là tài sản của chúng tôi. Toàn bộ nội dung của trang web được bảo vệ bởi luật bản quyền của Việt Nam và các công ước quốc tế. Bản quyền đã được bảo lưu.</p>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingFour">
+                                    <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                                    aria-expanded="false" aria-controls="collapseFour">
+                                        4. Quyền pháp lý
+                                    </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                           <p>- Các điều kiện, điều khoản và nội dung của trang web này được điều chỉnh bởi luật pháp Việt Nam và Tòa án có thẩm quyền tại Việt Nam sẽ giải quyết bất kỳ tranh chấp nào phát sinh từ việc sử dụng trái phép trang web này.</p>
+                                              </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingSix">
+                                    <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix"
+                                    aria-expanded="false" aria-controls="collapseSix">
+                                        5. Quy định về bảo mật
+                                    </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                       <p>- Trang web của chúng tôi coi trọng việc bảo mật thông tin và sử dụng các biện pháp tốt nhất bảo vệ thông tin và việc thanh toán của quý khách. Thông tin của quý khách trong quá trình thanh toán sẽ được mã hóa để đảm bảo an toàn. Sau khi quý khách hoàn thành quá trình đặt hàng, quý khách sẽ thoát khỏi chế độ an toàn.</p>
+                                   <p>- Quý khách không được sử dụng bất kỳ chương trình, công cụ hay hình thức nào khác để can thiệp vào hệ thống hay làm thay đổi cấu trúc dữ liệu. Trang web cũng nghiêm cấm việc phát tán, truyền bá hay cổ vũ cho bất kỳ hoạt động nào nhằm can thiệp, phá hoại hay xâm nhập vào dữ liệu của hệ thống. Cá nhân hay tổ chức vi phạm sẽ bị tước bỏ mọi quyền lợi cũng như sẽ bị truy tố trước pháp luật nếu cần thiết.</p>
+                                    <p>- Mọi thông tin giao dịch sẽ được bảo mật nhưng trong trường hợp cơ quan pháp luật yêu cầu, chúng tôi sẽ buộc phải cung cấp những thông tin này cho các cơ quan pháp luật.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingSeven">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven"
+                                                aria-expanded="false" aria-controls="collapseSeven">
+                                            6. Thay đổi, hủy bỏ giao dịch tại website
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <p>Trong mọi trường hợp, khách hàng đều có quyền chấm dứt giao dịch nếu đã thực hiện các biện pháp sau đây:</p>
+                                        <p>- Thông báo cho chúng tôi về việc hủy giao dịch qua đường dây nóng 04.6674.2332</p>
+                                        <p>- Trả lại hàng hoá đã nhận nhưng chưa sử dụng hoặc hưởng bất kỳ lợi ích nào từ hàng hóa đó (theo quy định của chính sách đổi trả hàng).
+
+                                        </p>
+                                         </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
