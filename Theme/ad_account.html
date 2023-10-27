@@ -12,6 +12,9 @@
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <!--external css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" integrity="sha512-77kidyGDJGWWmJ0MVO0CRp+6nRgZRK67frUVBRvnL1zCcmcw9FkCQxpDHq52SebW+KWTAnnuX0Qk2/MQWogWoQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
     <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet"/>
 
     <!-- Custom styles for this template -->
@@ -37,12 +40,12 @@
             <div class="fa fa-bars tooltips" data-placement="right"></div>
         </div>
         <!--logo start-->
-        <a href="index.html" class="logo"><b>Shop bán giày dép</b></a>
+        <a href="ad_index.html" class="logo"><b>Shop bán giày dép</b></a>
         <!--logo end-->
 
         <div class="top-menu">
             <ul class="nav pull-right top-menu">
-                <li><a class="logout" href="login.html">Đăng xuất</a></li>
+                <li><a class="logout" href="">Đăng xuất</a></li>
             </ul>
         </div>
     </header>
@@ -52,53 +55,59 @@
     *********************************************************************************************************************************************************** -->
     <!--sidebar start-->
     <aside>
-        <div id="sidebar" class="nav-collapse ">
+        <div id="sidebar"  class="nav-collapse ">
             <!-- sidebar menu start-->
             <ul class="sidebar-menu" id="nav-accordion">
 
                 <p class="centered"><a href="profile.html"><img src="assets/img/ui-sam.jpg" class="img-circle"
                                                                 width="60"></a></p>
-                <h5 class="centered">Ngân Nguyễn</h5>
+                <h5 class="centered">Hải Chiêu</h5>
 
                 <li class="mt">
-                    <a href="index.html">
+                    <a href="ad_index.html">
                         <i class="fa fa-dashboard"></i>
                         <span>Trang chủ</span>
                     </a>
                 </li>
-                <li class="sub-menu">
-                    <a href="javascript:;">
-                        <i class="fa fa-cogs"></i>
-                        <span>Các thành phần</span>
-                    </a>
-                    <ul class="sub">
-                        <li><a href="calendar.html">Lịch</a></li>
+                <!-- <li class="sub-menu">
+                     <a href="javascript:;">
+                         <i class="fa fa-cogs"></i>
+                         <span>Các thành phần</span>
+                     </a>
+                     <ul class="sub">
+                         <li><a href="ad_calendar.html">Lịch</a></li>
 
-                        <li><a href="todo_list.html">Todo List</a></li>
-                    </ul>
+                         <li><a href="ad_todo_list.html">Todo List</a></li>
+                     </ul>-->
 
 
-                <li class="sub-menu">
-                    <a href="chartjs.html">
+                <!--<li class="sub-menu">
+                    <a href="ad_chartjs.html">
                         <i class=" fa fa-bar-chart-o"></i>
                         <span>Biểu đồ</span>
                     </a>
 
-                </li>
-                <li class="active" class="sub-menu">
-                    <a  href="distributor.html">
+                </li>-->
+                <!--<li class="active" class="sub-menu">
+                    <a  href="ad_distributor.html">
                         <i class=" fa fa-bar-chart-o"></i>
                         <span>Nhà cung cấp</span>
                     </a>
-                </li>
+                </li>-->
                 <li class="sub-menu">
-                    <a href="account.html">
+                    <a href="ad_account.html">
                         <i class=" fa fa-bar-chart-o"></i>
                         <span>Tài khoản</span>
                     </a>
                 </li>
+                <li class="active" class="sub-menu">
+                    <a  href="ad_category.html">
+                        <i class=" fa fa-bar-chart-o"></i>
+                        <span>Danh Mục</span>
+                    </a>
+                </li>
                 <li class="sub-menu">
-                    <a href="product.html">
+                    <a href="ad_product.html">
                         <i class=" fa fa-bar-chart-o"></i>
                         <span>Sản phẩm</span>
                     </a>
@@ -117,6 +126,8 @@
     <section id="main-content">
         <section class="wrapper">
             <h3><i class="fa fa-angle-right"></i> Tài khoản</h3>
+            <button class="btn btn-primary"> + Thêm tài khoản mới</button>
+
 
             <div class="row mt">
                 <div class="col-md-12">
@@ -126,43 +137,43 @@
                         <table class="table">
                             <thead>
                             <tr>
-                                <th>#</th>
+                                <th>Id</th>
                                 <th>Họ</th>
                                 <th>Tên</th>
-                                <th>Username</th>
+                                <th>Tài Khoản</th>
                                 <th></th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr>
                                 <td>1</td>
-                                <td>Nguyễn</td>
-                                <td>Bảo Ngân</td>
-                                <td>@mdo</td>
+                                <td>Trần</td>
+                                <td>Hải Chiêu</td>
+                                <td>haichieu</td>
                                 <td>
-                                    <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
+                                    <!--<button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>-->
                                     <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
                                     <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
                                 </td>
                             </tr>
                             <tr>
                                 <td>2</td>
-                                <td>Nguyễn</td>
-                                <td>Phương Nhi</td>
-                                <td>@pn</td>
+                                <td>Lê</td>
+                                <td>Thành Nhân</td>
+                                <td>thanhnhan</td>
                                 <td>
-                                    <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
+                                   <!-- <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>-->
                                     <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
                                     <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
                                 </td>
                             </tr>
                             <tr>
                                 <td>3</td>
-                                <td>Nguyễn</td>
-                                <td>Hồng Linh</td>
-                                <td>@hiln</td>
-\                                <td>
-                                    <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
+                                <td>Đặng</td>
+                                <td>Minh Quý</td>
+                                <td>minhquy</td>
+                                <td>
+                                   <!-- <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>-->
                                     <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
                                     <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
                                 </td>
@@ -170,21 +181,21 @@
                             <tr>
                                 <td>4</td>
                                 <td>Trần</td>
-                                <td>Trọng</td>
+                                <td>Trọng Thế</td>
                                 <td>@ttt</td>
                                 <td>
-                                    <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
+                                    <!--<button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>-->
                                     <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
                                     <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
                                 </td>
                             </tr>
                             <tr>
                                 <td>5</td>
-                                <td>Tiêu</td>
+                                <td>Trần</td>
                                 <td>Hữu Chí</td>
                                 <td>@thc</td>
                                 <td>
-                                    <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
+                                    <!--<button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>-->
                                     <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
                                     <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
                                 </td>
@@ -205,7 +216,7 @@
     <footer class="site-footer">
         <div class="text-center">
 
-            <a href="account.html" class="go-top">
+            <a href="ad_account.html" class="go-top">
                 <i class="fa fa-angle-up"></i>
             </a>
         </div>
