@@ -7,11 +7,14 @@
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-    <title>Shop bán giày dép</title>
+    <title>Admin- Vua Tiền Tệ</title>
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <!--external css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" integrity="sha512-77kidyGDJGWWmJ0MVO0CRp+6nRgZRK67frUVBRvnL1zCcmcw9FkCQxpDHq52SebW+KWTAnnuX0Qk2/MQWogWoQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
     <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet"/>
 
     <!-- Custom styles for this template -->
@@ -37,12 +40,12 @@
             <div class="fa fa-bars tooltips" data-placement="right"></div>
         </div>
         <!--logo start-->
-        <a href="index.html" class="logo"><b>Shop bán giày dép</b></a>
+        <a href="ad_index.html" class="logo"><b>Shop bán giày dép</b></a>
         <!--logo end-->
 
         <div class="top-menu">
             <ul class="nav pull-right top-menu">
-                <li><a class="logout" href="login.html">Đăng xuất</a></li>
+                <li><a class="logout" href="">Đăng xuất</a></li>
             </ul>
         </div>
     </header>
@@ -52,53 +55,59 @@
     *********************************************************************************************************************************************************** -->
     <!--sidebar start-->
     <aside>
-        <div id="sidebar" class="nav-collapse ">
+        <div id="sidebar"  class="nav-collapse ">
             <!-- sidebar menu start-->
             <ul class="sidebar-menu" id="nav-accordion">
 
                 <p class="centered"><a href="profile.html"><img src="assets/img/ui-sam.jpg" class="img-circle"
                                                                 width="60"></a></p>
-                <h5 class="centered">Ngân Nguyễn</h5>
+                <h5 class="centered">Hải Chiêu</h5>
 
                 <li class="mt">
-                    <a href="index.html">
+                    <a href="ad_index.html">
                         <i class="fa fa-dashboard"></i>
                         <span>Trang chủ</span>
                     </a>
                 </li>
-                <li class="sub-menu">
-                    <a href="javascript:;">
-                        <i class="fa fa-cogs"></i>
-                        <span>Các thành phần</span>
-                    </a>
-                    <ul class="sub">
-                        <li><a href="calendar.html">Lịch</a></li>
+                <!-- <li class="sub-menu">
+                     <a href="javascript:;">
+                         <i class="fa fa-cogs"></i>
+                         <span>Các thành phần</span>
+                     </a>
+                     <ul class="sub">
+                         <li><a href="ad_calendar.html">Lịch</a></li>
 
-                        <li><a href="todo_list.html">Todo List</a></li>
-                    </ul>
+                         <li><a href="ad_todo_list.html">Todo List</a></li>
+                     </ul>-->
 
 
-                <li class="sub-menu">
-                    <a href="chartjs.html">
+                <!--<li class="sub-menu">
+                    <a href="ad_chartjs.html">
                         <i class=" fa fa-bar-chart-o"></i>
                         <span>Biểu đồ</span>
                     </a>
 
-                </li>
-                <li class="active" class="sub-menu">
-                    <a  href="distributor.html">
+                </li>-->
+                <!--<li class="active" class="sub-menu">
+                    <a  href="ad_distributor.html">
                         <i class=" fa fa-bar-chart-o"></i>
                         <span>Nhà cung cấp</span>
                     </a>
-                </li>
+                </li>-->
                 <li class="sub-menu">
-                    <a href="account.html">
+                    <a href="ad_account.html">
                         <i class=" fa fa-bar-chart-o"></i>
                         <span>Tài khoản</span>
                     </a>
                 </li>
+                <li class="active" class="sub-menu">
+                    <a  href="ad_category.html">
+                        <i class=" fa fa-bar-chart-o"></i>
+                        <span>Danh Mục</span>
+                    </a>
+                </li>
                 <li class="sub-menu">
-                    <a href="product.html">
+                    <a href="ad_product.html">
                         <i class=" fa fa-bar-chart-o"></i>
                         <span>Sản phẩm</span>
                     </a>
@@ -116,112 +125,88 @@
     <!--main content start-->
     <section id="main-content">
         <section class="wrapper">
-            <h3><i class="fa fa-angle-right"></i>Nhà cung cấp</h3>
+            <h3><i class="fa fa-angle-right"></i> Danh Mục</h3>
+            <button class="btn btn-primary"> + Thêm danh mục mới</button>
+
 
             <div class="row mt">
                 <div class="col-md-12">
                     <div class="content-panel">
-                        <table class="table table-striped table-advance table-hover">
-                            <h4><i class="fa fa-angle-right"></i> Danh sách</h4>
-                            <hr>
+                        <h4><i class="fa fa-angle-right"></i> Danh sách</h4>
+                        <hr>
+                        <table class="table">
                             <thead>
                             <tr>
-                                <th><i class="fa fa-bullhorn"></i>Công ty</th>
-                                <th class="hidden-phone"><i class="fa fa-question-circle"></i> Nhà cung cấp</th>
-                                <th><i class="fa fa-bookmark"></i> Số tiền phải trả</th>
-                                <th><i class=" fa fa-edit"></i> Trạng thái</th>
+                                <th>id</th>
+                                <th>Loại danh mục</th>
+                                <th>Tên</th>
+                                <!--<th>Username</th>-->
                                 <th></th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr>
-                                <td><a href="distributor.html">Công ty TNHH</a></td>
-                                <td class="hidden-phone">Nguyên Khánh</td>
-                                <td>220.000.000 đ</td>
-                                <td><span class="label label-info label-mini">Quá hạn</span></td>
+                                <td>1</td>
+                                <td>3</td>
+                                <td>Tiền nước ngoài</td>
+                                <!--<td>haichieu</td>-->
                                 <td>
-                                    <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
+                                    <!--<button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>-->
                                     <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
                                     <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
                                 </td>
                             </tr>
                             <tr>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>Tiền Việt Nam</td>
+                               <!-- <td>thanhnhan</td>-->
                                 <td>
-                                    <a href="distributor.html">
-                                        Công ty cổ phần
-                                    </a>
-                                </td>
-                                <td class="hidden-phone">Lorem</td>
-                                <td>190.900.000 đ</td>
-                                <td><span class="label label-warning label-mini">Quá hạn</span></td>
-                                <td>
-                                    <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
+                                    <!--<button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>-->
                                     <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
                                     <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
                                 </td>
                             </tr>
                             <tr>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>Tiền Xu</td>
+                                <!--<td>minhquy</td>-->
                                 <td>
-                                    <a href="distributor.html">
-                                        Công ty TNHH
-                                    </a>
-                                </td>
-                                <td class="hidden-phone">ALB</td>
-                                <td>170.400.000 đ</td>
-                                <td><span class="label label-success label-mini">Đã trả</span></td>
-                                <td>
-                                    <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
+                                    <!--<button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>-->
                                     <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
                                     <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
                                 </td>
                             </tr>
                             <tr>
+                                <td>4</td>
+                                <td>2</td>
+                                <td>Tiền Xu</td>
+                                <<!--td>@ttt</td>-->
                                 <td>
-                                    <a href="distributor.html">
-                                        Công ty TNHH
-                                    </a>
-                                </td>
-                                <td class="hidden-phone">Bình An</td>
-                                <td>120.000.500 đ</td>
-                                <td><span class="label label-success label-mini">Đã trả</span></td>
-                                <td>
-                                    <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
+                                    <!--<button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>-->
                                     <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
                                     <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
                                 </td>
                             </tr>
                             <tr>
-                                <td><a href="distributor.html">Tổng công ty TNHH</a></td>
-                                <td class="hidden-phone">An Nguyên</td>
-                                <td>115.120.000 đ</td>
-                                <td><span class="label label-warning label-mini">Quá hạn</span></td>
+                                <td>5</td>
+                                <td>1</td>
+                                <td>Tiền Việt Nam</td>
+                                <!--<td>@thc</td>-->
                                 <td>
-                                    <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                                    <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                                    <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a href="distributor.html">
-                                        Công ty cổ phần
-                                    </a>
-                                </td>
-                                <td class="hidden-phone">Bitis</td>
-                                <td>190.900.000 đ</td>
-                                <td><span class="label label-success label-mini">Đã trả</span></td>
-                                <td>
-                                    <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
+                                    <!--<button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>-->
                                     <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
                                     <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
                                 </td>
                             </tr>
                             </tbody>
                         </table>
-                    </div><!-- /content-panel -->
+                    </div>
+                    <! --/content-panel -->
                 </div><!-- /col-md-12 -->
-            </div><!-- /row -->
 
+            </div>
         </section>
         <! --/wrapper -->
     </section><!-- /MAIN CONTENT -->
@@ -231,7 +216,7 @@
     <footer class="site-footer">
         <div class="text-center">
 
-            <a href="distributor.html" class="go-top">
+            <a href="ad_account.html" class="go-top">
                 <i class="fa fa-angle-up"></i>
             </a>
         </div>

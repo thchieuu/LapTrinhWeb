@@ -1410,6 +1410,7 @@ PANELS CONFIGURATIONS
 
 /* Calendar Configuration */
 #calendar {
+    float: left;
 	color: white;
 	padding: 0px !important;
 }
