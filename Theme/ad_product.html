@@ -125,7 +125,9 @@
     <section id="main-content">
         <section class="wrapper">
             <h3><i class="fa fa-angle-right"></i>Sản phẩm</h3>
-            <button class="btn btn-primary"> + Thêm sản phẩm mới</button>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#addProductModal"> + Thêm sản phẩm mới</button>
+
+
 
             <div class="row mt">
                 <div class="col-md-12 mt">
@@ -257,6 +259,57 @@
                 </div><!-- /col-md-12 -->
 
             </div>
+
+            <!-- Modal để thêm sản phẩm mới -->
+            <div class="modal fade" id="addProductModal" tabindex="-1" role="dialog" aria-labelledby="addProductModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="addProductModalLabel">Thêm sản phẩm mới</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- Thêm các yếu tố biểu mẫu của bạn ở đây -->
+                            <form>
+                                <div class="form-group">
+                                    <label for="productName">Tên sản phẩm</label>
+                                    <input type="text" class="form-control" id="productName">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="productPrice">Giá</label>
+                                    <input type="text" class="form-control" id="productPrice">
+                                </div>
+                                <div class="form-group">
+                                    <label for="productName">Hình ảnh</label>
+                                    <input type="file" class="form-control" id="productImage">
+                                </div>
+                                <div class="form-group">
+                                    <label for="productName">Mô tả sản phẩm</label>
+                                    <input type="text" class="form-control" id="productDes">
+                                </div>
+                                <div class="form-group">
+                                    <label for="productType">Danh mục</label>
+                                    <select type="form-select" class ="form-control" id="productType">
+                                        <option value="1">Tiền giấy Việt Nam</option>
+                                        <option value="2">Tiền xu Việt Nam</option>
+                                        <option value="3">Tiền giấy nước ngoài</option>
+                                        <option value="4">Tiền xu nước ngoài</option>
+                                    </select>
+                                </div>
+                                <!-- Thêm thêm các yếu tố biểu mẫu theo nhu cầu -->
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                            <button type="button" class="btn btn-primary">Lưu</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </section>
         <! --/wrapper -->
     </section><!-- /MAIN CONTENT -->
@@ -274,6 +327,7 @@
     <!--footer end-->
 </section>
 
+
 <!-- js placed at the end of the document so the pages load faster -->
 <script src="assets/js/jquery.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
@@ -285,7 +339,6 @@
 <!--common script for all pages-->
 <script src="assets/js/common-scripts.js"></script>
 
-<!--script for this page-->
 
 <script>
     //custom select box
@@ -295,6 +348,9 @@
     });
 
 </script>
+
+
+
 
 </body>
 </html>
