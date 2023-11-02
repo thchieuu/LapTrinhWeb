@@ -126,7 +126,7 @@
     <section id="main-content">
         <section class="wrapper">
             <h3><i class="fa fa-angle-right"></i> Tài khoản</h3>
-            <button class="btn btn-primary"> + Thêm tài khoản mới</button>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#addAccountModal"> + Thêm tài khoản mới</button>
 
 
             <div class="row mt">
@@ -138,18 +138,23 @@
                             <thead>
                             <tr>
                                 <th>Id</th>
-                                <th>Họ</th>
-                                <th>Tên</th>
-                                <th>Tài Khoản</th>
-                                <th></th>
+                                <th>Họ Tên</th>
+                                <th>Số điện thoại</th>
+                                <th>Địa chỉ</th>
+                                <th>Email</th>
+                                <th>Tên đăng nhập</th>
+                                <th>Quyền</th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr>
                                 <td>1</td>
-                                <td>Trần</td>
-                                <td>Hải Chiêu</td>
+                                <td>Trần Hải Chiêu</td>
+                                <td>0345682702</td>
+                                <td>TG</td>
+                                <td>thc@gmail.com</td>
                                 <td>haichieu</td>
+                                <td>1</td>
                                 <td>
                                     <!--<button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>-->
                                     <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
@@ -158,9 +163,12 @@
                             </tr>
                             <tr>
                                 <td>2</td>
-                                <td>Lê</td>
-                                <td>Thành Nhân</td>
+                                <td>Lê Thành Nhân</td>
+                                <td>012345678</td>
+                                <td>Tp.HCM</td>
+                                <td>ltn@gmail.com</td>
                                 <td>thanhnhan</td>
+                                <td>1</td>
                                 <td>
                                    <!-- <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>-->
                                     <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
@@ -169,9 +177,12 @@
                             </tr>
                             <tr>
                                 <td>3</td>
-                                <td>Trịnh</td>
-                                <td>Minh Quý</td>
+                                <td>Trịnh Minh Quý</td>
+                                <td>0987654321</td>
+                                <td>Tp.HCM</td>
+                                <td>tmq@gmail.com</td>
                                 <td>minhquy</td>
+                                <td>1</td>
                                 <td>
                                    <!-- <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>-->
                                     <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
@@ -180,9 +191,12 @@
                             </tr>
                             <tr>
                                 <td>4</td>
-                                <td>Trần</td>
-                                <td>Trọng Thế</td>
-                                <td>@ttt</td>
+                                <td>Nguyễn Văn A</td>
+                                <td>0954213621</td>
+                                <td>Đồng Nai</td>
+                                <td>nva@gmail.com</td>
+                                <td>AAAA</td>
+                                <td>0</td>
                                 <td>
                                     <!--<button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>-->
                                     <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
@@ -191,9 +205,12 @@
                             </tr>
                             <tr>
                                 <td>5</td>
-                                <td>Trần</td>
-                                <td>Hữu Chí</td>
-                                <td>@thc</td>
+                                <td>Huỳnh Thị C</td>
+                                <td>0731110286</td>
+                                <td>Đà Nẵng</td>
+                                <td>htc@gmail.com</td>
+                                <td>cCCccc</td>
+                                <td>0</td>
                                 <td>
                                     <!--<button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>-->
                                     <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
@@ -207,9 +224,60 @@
                 </div><!-- /col-md-12 -->
 
             </div>
+
+            <div class="modal fade" id="addAccountModal" tabindex="-1" role="dialog" aria-labelledby="addAccountModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="addProductModalLabel">Thêm tài khoản mới</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- Thêm các yếu tố biểu mẫu của bạn ở đây -->
+                            <form>
+                                <div class="form-group">
+                                    <label for="productName">Họ Tên</label>
+                                    <input type="text" class="form-control" id="productName">
+                                </div>
+                                <div class="form-group">
+                                    <label for="productName">Số điện thoại</label>
+                                    <input type="text" class="form-control" id="productPhone">
+                                </div>
+                                <div class="form-group">
+                                    <label for="productName">Địa chỉ</label>
+                                    <input type="text" class="form-control" id="productAddress">
+                                </div>
+                                <div class="form-group">
+                                    <label for="productName">Mật khẩu</label>
+                                    <input type="text" class="form-control" id="productPass">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="productName">Email</label>
+                                    <input type="text" class="form-control" id="productEmail">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="productPrice">Tên đăng nhập</label>
+                                    <input type="text" class="form-control" id="productPrice">
+                                </div>
+
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                            <button type="button" class="btn btn-primary">Lưu</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </section>
         <! --/wrapper -->
     </section><!-- /MAIN CONTENT -->
+
 
     <!--main content end-->
     <!--footer start-->

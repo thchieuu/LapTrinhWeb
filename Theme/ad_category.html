@@ -126,7 +126,7 @@
     <section id="main-content">
         <section class="wrapper">
             <h3><i class="fa fa-angle-right"></i> Danh Mục</h3>
-            <button class="btn btn-primary"> + Thêm danh mục mới</button>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#addCategoryModal"> + Thêm danh mục mới</button>
 
 
             <div class="row mt">
@@ -147,8 +147,8 @@
                             <tbody>
                             <tr>
                                 <td>1</td>
-                                <td>3</td>
-                                <td>Tiền nước ngoài</td>
+                                <td>4</td>
+                                <td>Tiền xu nước ngoài</td>
                                 <!--<td>haichieu</td>-->
                                 <td>
                                     <!--<button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>-->
@@ -159,7 +159,7 @@
                             <tr>
                                 <td>2</td>
                                 <td>1</td>
-                                <td>Tiền Việt Nam</td>
+                                <td>Tiền giấy Việt Nam</td>
                                <!-- <td>thanhnhan</td>-->
                                 <td>
                                     <!--<button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>-->
@@ -170,7 +170,7 @@
                             <tr>
                                 <td>3</td>
                                 <td>2</td>
-                                <td>Tiền Xu</td>
+                                <td>Tiền xu Việt Nam</td>
                                 <!--<td>minhquy</td>-->
                                 <td>
                                     <!--<button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>-->
@@ -181,7 +181,7 @@
                             <tr>
                                 <td>4</td>
                                 <td>2</td>
-                                <td>Tiền Xu</td>
+                                <td>Tiền xu Việt Nam</td>
                                 <<!--td>@ttt</td>-->
                                 <td>
                                     <!--<button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>-->
@@ -191,8 +191,8 @@
                             </tr>
                             <tr>
                                 <td>5</td>
-                                <td>1</td>
-                                <td>Tiền Việt Nam</td>
+                                <td>3</td>
+                                <td>Tiền giấy nước ngoài</td>
                                 <!--<td>@thc</td>-->
                                 <td>
                                     <!--<button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>-->
@@ -206,6 +206,37 @@
                     <! --/content-panel -->
                 </div><!-- /col-md-12 -->
 
+            </div>
+            <div class="modal fade" id="addCategoryModal" tabindex="-1" role="dialog" aria-labelledby="addCategoryModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="addProductModalLabel">Thêm danh mục mới</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- Thêm các yếu tố biểu mẫu của bạn ở đây -->
+                            <form>
+                                <div class="form-group">
+                                    <label for="productName">Loại danh mục</label>
+                                    <input type="text" class="form-control" id="productName">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="productPrice">Tên danh mục</label>
+                                    <input type="text" class="form-control" id="productPrice">
+                                </div>
+
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                            <button type="button" class="btn btn-primary">Lưu</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <! --/wrapper -->
