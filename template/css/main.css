@@ -76,10 +76,12 @@
 /*Bootstrap Variables*/
 /* Media Queries */
 .one-column-slider.two-row .slick-active > div, .one-column-slider.three-row .slick-active > div {
+    font-family: "Open Sans","HelveticaNeue","Helvetica Neue",sans-serif;
     position: relative;
 }
 
 .one-column-slider.two-row .slick-active > div:before, .one-column-slider.three-row .slick-active > div:before {
+    font-family: "Open Sans","HelveticaNeue","Helvetica Neue",sans-serif;
     content: "";
     position: absolute;
     background: #ececec;
@@ -90,10 +92,12 @@
 }
 
 .normal-slider .slick-slide {
+    font-family: "Open Sans","HelveticaNeue","Helvetica Neue",sans-serif;
     position: relative;
 }
 
 .normal-slider .slick-slide:before {
+    font-family: "Open Sans","HelveticaNeue","Helvetica Neue",sans-serif;
     content: "";
     width: 1px;
     position: absolute;
@@ -107,6 +111,7 @@
 ====> Reset Styles
 */
 * {
+    font-family: "Open Sans","HelveticaNeue","Helvetica Neue",sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -115,7 +120,7 @@
 /*=== MEDIA QUERY ===*/
 /*=== MEDIA QUERY with max width===*/
 body {
-    font-family: Rubik, sans-serif;
+    font-family: "Open Sans","HelveticaNeue","Helvetica Neue",sans-serif;
     font-weight: 400;
     color: #555555;
     font-size: 14px;
@@ -129,68 +134,81 @@ h3,
 h4,
 h5,
 h6 {
+    font-family: "Open Sans","HelveticaNeue","Helvetica Neue",sans-serif;
     margin: 0;
     padding: 0;
 }
 
 a,
 span {
+    font-family: "Open Sans","HelveticaNeue","Helvetica Neue",sans-serif;
     display: inline-block;
 }
 
 a {
+    font-family: "Open Sans","HelveticaNeue","Helvetica Neue",sans-serif;
     transition: 0.4s;
     color: inherit;
     text-decoration: none;
 }
 
 a:focus {
+    font-family: "Open Sans","HelveticaNeue","Helvetica Neue",sans-serif;
     outline: none !important;
 }
 
 a:hover {
+    font-family: "Open Sans","HelveticaNeue","Helvetica Neue",sans-serif;
     text-decoration: none;
 }
 
 a:visited,
 a:active {
+    font-family: "Open Sans","HelveticaNeue","Helvetica Neue",sans-serif;
     outline: none;
     border: none;
     text-decoration: none;
 }
 
 ul {
+    font-family: "Open Sans","HelveticaNeue","Helvetica Neue",sans-serif;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
 img {
+    font-family: "Open Sans","HelveticaNeue","Helvetica Neue",sans-serif;
     max-width: 100%;
 }
 
 p {
+    font-family: "Open Sans","HelveticaNeue","Helvetica Neue",sans-serif;
     line-height: 20px;
 }
 
 .btn:focus,
 .btn:active {
+    font-family: "Open Sans","HelveticaNeue","Helvetica Neue",sans-serif;
     box-shadow: none;
     border-color: transparent;
 }
 
 button {
+    font-family: "Open Sans","HelveticaNeue","Helvetica Neue",sans-serif;
     cursor: pointer;
     background: transparent;
     border: none;
 }
 
 button:focus {
+    font-family: "Open Sans","HelveticaNeue","Helvetica Neue",sans-serif;
     outline: none;
 }
 
 .icon {
-    font-size: inherit;
+
+    font-family: "Open Sans","HelveticaNeue","Helvetica Neue",sans-serif;
 }
 
 h1,
@@ -14969,4 +14987,22 @@ a.gallary-item:hover {
 
 .l-widget{
     border-left: 1px solid #ececec;
+}
+.container_forgot{
+    font-family: "Open Sans","HelveticaNeue","Helvetica Neue",sans-serif;
+    margin: auto;
+    padding: 50px;
+    padding-left: 500px;
+
+}
+.container_forgot .action_bottom{
+   float: right;
+}
+.container_forgot .row .col-md-6 h1{
+    padding-bottom: 10px;
+
+}
+
+.container_forgot .row .col-md-6 label{
+    padding-bottom: 10px;
 }
