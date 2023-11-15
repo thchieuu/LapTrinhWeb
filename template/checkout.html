@@ -8,6 +8,13 @@
         <link rel="stylesheet" href="css/main.css" />
         <link rel="shortcut icon" type="image/x-icon" href="image/favicon.ico">
         <title>Thanh Toán</title>
+        <style>
+            .error-message {
+                color: red;
+                font-size: 14px;
+                margin-top: 5px;
+            }
+        </style>
     </head>
     <body class="">
         <div class="site-wrapper">
@@ -360,8 +367,9 @@
                                                     <div class="term-block">
                                                         <input type="checkbox" id="accept_terms2">
                                                         <label for="accept_terms2">Tôi đã đọc và chấp nhận các điều khoản & điều kiện</label>
+                                                        <div id="terms-error" class="error-message"></div>
                                                     </div>
-                                                    <button class="place-order w-100">Đặt hàng</button>
+                                                    <button class="place-order w-100" onclick="placeOrder()">Đặt hàng</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -452,6 +460,23 @@
         </div>
         </footer>
     </div>
+        <script>
+            function placeOrder() {
+                // Kiểm tra trạng thái của checkbox
+                var termsCheckbox = document.getElementById("accept_terms2");
+                var termsError = document.getElementById("terms-error");
+
+                if (!termsCheckbox.checked) {
+                    // Nếu checkbox không được chọn, hiển thị thông báo
+                    termsError.textContent = "Vui lòng đọc và chấp nhận các điều khoản & điều kiện trước khi đặt hàng.";
+                } else {
+                    // Nếu checkbox được chọn, xử lý đặt hàng
+                    // Thêm mã xử lý đặt hàng ở đây
+                    termsError.textContent = ""; // Xóa thông báo nếu có
+                  //  alert("Đơn hàng đã được đặt!");
+                }
+            }
+        </script>
     <script src="js/plugins.js"></script>
     <script src="js/ajax-mail.js"></script>
     <script src="js/custom.js"></script>
