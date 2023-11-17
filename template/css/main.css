@@ -13477,6 +13477,8 @@ a.gallary-item:hover {
 @media (min-width: 768px) {
     .login-title {
         font-size: 30px;
+        position: relative;
+
     }
 }
 
@@ -13487,6 +13489,7 @@ a.gallary-item:hover {
     margin: 2em 0;
     text-align: left;
     border-radius: 5px;
+    position: relative;
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
