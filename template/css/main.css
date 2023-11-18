@@ -15025,4 +15025,29 @@ a.gallary-item:hover {
 .bg-ash {
     background-color: #00B1BF;
 }
+.blog-image-blog{
+    width: 370px;
+    height: 200px;
 
+}
+.blog-title-blog a{
+    display:inline-block;
+    font-size: 15px;
+    font-weight: bolder;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+
+}
+.blog-blog-blog article p{
+    word-wrap: normal;
+    text-overflow: ellipsis;
+    height: 100px;
+}
+.mt--1500{
+    padding: 50px 0px 50px 0px;
+}
+.menu-footer{
+    background-color: #6D6D6D;
+    padding-left: 100px;
+}
