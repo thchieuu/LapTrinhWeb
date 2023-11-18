@@ -15062,3 +15062,36 @@ a.gallary-item:hover {
     color: #FFFFFF;
     border-radius: 5px;
 }
+.pt--500{
+
+}
+.menu-footer .social-icons{
+    float: right;
+    position: relative;
+    bottom: 45px;
+    left: 290px;
+    color:white;
+    margin: 0px 10px 0px 0px;
+
+
+}
+.footer-title-title{
+    color: #fff;
+    display: inline-block;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.single-footer-support{
+    position: relative;
+    left: 400px;
+}
+.single-footer-term{
+    position: relative;
+    left: 90px;
+    width: 500px;
+}
+.site-footer p span{
+
+}
