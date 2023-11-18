@@ -144,17 +144,18 @@
                             <thead>
                             <tr>
                                 <th>Id</th>
-                                <th>Loại danh mục</th>
                                 <th>Tên</th>
-                                <!--<th>Username</th>-->
+                                <th>Trạng thái</th>
+                                <th>Id Lớn</th>
                                 <th></th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr>
                                 <td>1</td>
-                                <td>4</td>
-                                <td>Tiền xu nước ngoài</td>
+                                <td>Châu Á</td>
+                                <td>1</td>
+                                <td>0</td>
                                 <!--<td>haichieu</td>-->
                                 <td>
                                     <!--<button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>-->
@@ -164,9 +165,9 @@
                             </tr>
                             <tr>
                                 <td>2</td>
+                                <td>Nhật Bản</td>
                                 <td>1</td>
-                                <td>Tiền giấy Việt Nam</td>
-                               <!-- <td>thanhnhan</td>-->
+                                <td>1</td>
                                 <td>
                                     <!--<button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>-->
                                     <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
@@ -175,37 +176,16 @@
                             </tr>
                             <tr>
                                 <td>3</td>
-                                <td>2</td>
-                                <td>Tiền xu Việt Nam</td>
-                                <!--<td>minhquy</td>-->
+                                <td>Việt Nam</td>
+                                <td>1</td>
+                                <td>1</td>
                                 <td>
                                     <!--<button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>-->
                                     <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
                                     <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>2</td>
-                                <td>Tiền xu Việt Nam</td>
-                                <<!--td>@ttt</td>-->
-                                <td>
-                                    <!--<button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>-->
-                                    <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                                    <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td>3</td>
-                                <td>Tiền giấy nước ngoài</td>
-                                <!--<td>@thc</td>-->
-                                <td>
-                                    <!--<button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>-->
-                                    <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                                    <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                                </td>
-                            </tr>
+
                             </tbody>
                         </table>
                     </div>
@@ -230,13 +210,17 @@
                                     <input type="text" class="form-control" id="productId">
                                 </div>
                                 <div class="form-group">
-                                    <label for="productName">Loại danh mục</label>
+                                    <label for="productName">Tên danh mục</label>
                                     <input type="text" class="form-control" id="productName">
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="productPrice">Tên danh mục</label>
+                                    <label for="productPrice">Trạng thái</label>
                                     <input type="text" class="form-control" id="productPrice">
+                                </div>
+                                <div class="form-group">
+                                    <label for="productPrice">Id Lớn</label>
+                                    <input type="text" class="form-control" id="productIdParent">
                                 </div>
 
                             </form>
