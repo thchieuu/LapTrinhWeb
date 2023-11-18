@@ -13326,7 +13326,7 @@ a.gallary-item:hover {
 }
 
 .myaccount-tab-menu a:hover, .myaccount-tab-menu a.active {
-    background-color: #56a700;
+    background-color: #00B1BF;
     color: #ffff;
 }
 
@@ -13342,6 +13342,8 @@ a.gallary-item:hover {
     border: 1px solid #cecece;
     padding: 30px;
     color: #1a1f2b;
+    position: relative;
+    bottom: 30px;
 }
 
 @media only screen and (max-width: 479px) {
@@ -13446,6 +13448,8 @@ a.gallary-item:hover {
 }
 
 .account-details-form input {
+    position: relative;
+    right:320px;
     display: block;
     width: 100%;
     border: 1px solid #cecece;
@@ -15025,4 +15029,36 @@ a.gallary-item:hover {
 .bg-ash {
     background-color: #00B1BF;
 }
+.blog-image-blog{
+    width: 370px;
+    height: 200px;
 
+}
+.blog-title-blog a{
+    display:inline-block;
+    font-size: 15px;
+    font-weight: bolder;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+
+}
+.blog-blog-blog article p{
+    word-wrap: normal;
+    text-overflow: ellipsis;
+    height: 100px;
+}
+.mt--1500{
+    padding: 50px 0px 50px 0px;
+}
+.menu-footer{
+    background-color: #6D6D6D;
+    padding-left: 100px;
+}
+.col-12 button{
+    background-color: #0866FF;
+    width: 120px;
+    height: 40px;
+    color: #FFFFFF;
+    border-radius: 5px;
+}
