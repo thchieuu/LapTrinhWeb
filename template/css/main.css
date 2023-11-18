@@ -12661,8 +12661,6 @@ a.gallary-item:hover {
 }
 
 .blog-page-section {
-    padding-top: 40px;
-    padding-bottom: 40px;
 }
 
 @media (min-width: 576px) {
@@ -15094,4 +15092,8 @@ a.gallary-item:hover {
 }
 .site-footer p span{
 
+}
+.left-slide-marginn{
+    position: relative;
+    right: 180px;
 }
