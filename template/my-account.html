@@ -206,6 +206,7 @@
 										<a href="#payment-method" data-bs-toggle="tab"><i class="fa fa-credit-card"></i> Phương thức thanh toán</a>
 										<a href="#address-edit" data-bs-toggle="tab"><i class="fa fa-map-marker"></i> Địa chỉ thanh toán</a>
 										<a href="#account-info" data-bs-toggle="tab"><i class="fa fa-user"></i> Cập nhật tài khoản</a>
+										<a href="#account-change-password" data-bs-toggle="tab"><i class="fa fa-key"></i> Thay đổi mật khẩu</a>
 										<a href="login.html"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
 									</div>
 								</div>
@@ -310,27 +311,43 @@
 													<form action="#">
 														<div class="row">
 															<div class="col-lg-6 col-12 mb-30">
-																<input id="first-name" placeholder="Họ và Tên Đệm" type="text">
+																<input id="full-name" placeholder="Họ và Tên Đệm" type="text">
 															</div>
-															<div class="col-lg-6 col-12 mb-30">
-																<input id="last-name" placeholder="Tên" type="text">
+
+															<div class="col-12 mb-30">
+																<input id="sex" placeholder="Giới tính" type="sex">
 															</div>
 															<div class="col-12 mb-30">
-																<input id="display-name" placeholder="Tên Hiển thị" type="text">
+																<input id="birthDate" placeholder="Ngày sinh" type="birthDate">
+															</div>
+
+
+															<div class="col-12">
+																<button class="theme-btn">Lưu Thay đổi</button>
+															</div>
+														</div>
+													</form>
+												</div>
+											</div>
+										</div>
+										<div class="tab-pane fade" id="account-change-password" role="tabpanel">
+											<div class="myaccount-content">
+												<h3>Thay đổi mật khẩu</h3>
+												<div class="account-details-form">
+													<form action="#">
+														<div class="row">
+															<div class="col-lg-6 col-12 mb-30">
+																<input id="password-old" placeholder="Mật khẩu cũ" type="text">
+															</div>
+
+															<div class="col-12 mb-30">
+																<input id="password-new" placeholder="Mật khẩu mới" type="text">
 															</div>
 															<div class="col-12 mb-30">
-																<input id="email" placeholder="Địa chỉ Email" type="email">
+																<input id="password-verify" placeholder="Xác nhận mật khẩu mới" type="text">
 															</div>
-															<div class="col-12 mb-30"><h4>Thay đổi mật khẩu</h4></div>
-															<div class="col-12 mb-30">
-																<input id="current-pwd" placeholder="Mật khẩu hiện tại" type="password">
-															</div>
-															<div class="col-lg-6 col-12 mb-30">
-																<input id="new-pwd" placeholder="Mật khẩu mới" type="password">
-															</div>
-															<div class="col-lg-6 col-12 mb-30">
-																<input id="confirm-pwd" placeholder="Xác nhận mật khẩu" type="password">
-															</div>
+
+
 															<div class="col-12">
 																<button class="theme-btn">Lưu Thay đổi</button>
 															</div>
@@ -450,7 +467,7 @@
 						</div>
 					</div>
 				</div>
-		</div>
+
 		<div class="footer-copyright">
 			<p>QCN Money. Thiết kế bởi Chiêu , Nhân , Quý </p>
 		</div>
