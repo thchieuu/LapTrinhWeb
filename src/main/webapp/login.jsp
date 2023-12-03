@@ -64,41 +64,7 @@
 				</div>
 			</main>
 			<!--=====  End of Login Register page contents  ======-->
-			<div class="menu-footer">
-				<nav class="main-navigation ">
-					<!-- Mainmenu Start -->
-					<ul class="mainmenu">
-						<li class="mainmenu__item ">
-							<a href="index.html" class="mainmenu__link">Trang chủ</a>
-						</li>
-						<li class="mainmenu__item ">
-							<a href="shop-left-sidebar.html" class="mainmenu__link"> Sản phẩm</a>
-						</li>
-						<li class="mainmenu__item ">
-							<a href="blog-list-left-sidebar.html" class="mainmenu__link">Tin tức</a>
-						</li>
-						<li class="mainmenu__item ">
-							<a href="contact.html" class="mainmenu__link">Liên hệ</a>
-						</li>
-						<li class="mainmenu__item ">
-							<a href="faq.html" class="mainmenu__link">Giới Thiệu</a>
-						</li>
-						<li class="mainmenu__item ">
-							<a href="cart.html" class="mainmenu__link">Giỏ hàng</a>
-						</li>
-						<p class="social-icons">
-							<a href="#"><i class="fab fa-facebook-f"></i></a>
-							<a href="#"><i class="fab fa-twitter"></i></a>
-							<a href="#"><i class="fab fa-instagram"></i></a>
-							<a href="#"><i class="fab fa-linkedin-in"></i></a>
-							<a href="#"><i class="fas fa-rss"></i></a>
-						</p>
 
-
-					</ul>
-					<!-- Mainmenu End -->
-				</nav>
-			</div>
 
 			<jsp:include page="footer.jsp"></jsp:include>
 	<script src="js/plugins.js"></script>
