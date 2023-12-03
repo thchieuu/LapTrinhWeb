@@ -123,7 +123,7 @@
 					</div>
 				</div>
 			</section>
-		
+
 				<jsp:include page="footer.jsp"></jsp:include>
 	<script src="js/plugins.js"></script>
 	<script src="js/ajax-mail.js"></script>
