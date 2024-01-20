@@ -36,7 +36,7 @@
 										<a href="#address-edit" data-bs-toggle="tab"><i class="fa fa-map-marker"></i> Địa chỉ thanh toán</a>
 										<a href="#account-info" data-bs-toggle="tab"><i class="fa fa-user"></i> Cập nhật tài khoản</a>
 										<a href="#account-change-password" data-bs-toggle="tab"><i class="fa fa-key"></i> Thay đổi mật khẩu</a>
-										<a href="login.html"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
+										<a href="logout"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
 									</div>
 								</div>
 								<!-- My Account Tab Menu End -->
@@ -73,25 +73,6 @@
 															</tr>
 														</thead>
 														<tbody>
-															<tr>
-																<td>1</td>
-																<td> VIAMOX LA 20%</td>
-																<td>2</td>
-																<td>08/11/2022</td>
-																<td>chưa giải quyết
-																</td>
-																<td>250.000 VNĐ</td>
-																<td><a href="cart.html" class="btn">Xem sản phẩm</a></td>
-															</tr>
-															<tr>
-																<td>2</td>
-																<td>GLUCO KCE CAPTOX</td>
-																<td>1</td>
-																<td>04/11/2022</td>
-																<td>Đã phê duyệt</td>
-																<td>99.000 VNĐ</td>
-																<td><a href="cart.html" class="btn">Xem Sản phẩm</a></td>
-															</tr>
 															<tr>
 																<td>3</td>
 																<td>ALPHA TRYPSIN WSP</td>
