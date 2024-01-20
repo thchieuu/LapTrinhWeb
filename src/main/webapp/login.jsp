@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
@@ -27,39 +28,62 @@
 			=============================================-->
 			<main class="page-section pb--10 pt--50">
 				<div class="container">
-					<header class="entry-header">
-						<h1 class="entry-title">Tài khoản của bạn</h1>
-					</header>
+
 					<div class="row">
-						<div class="col-sm-12 col-md-12 col-xs-12 col-lg-6 mb-30">
+						<% String mess = (String) request.getAttribute("mess");
+							if (mess != null) {%>
+						<div class="alert-danger"
+							 style="
+                        color: white;
+                        background-color: #ff0000;
+                        font-size: 16px;
+                        font-weight: 600;
+                        padding: 10px;
+                        margin-bottom: 15px;
+                        border-radius: 5px;">
+							<%= mess %>
+						</div>
+						<%}%>
+						<div class="col-sm-12 col-md-12 col-xs-12 col-lg-6 mb-30" style="position: inherit">
 							<!-- Login Form s-->
-							<form action="https://htmldemo.net/petmark/petmark/" >
+							<form action="login" method="post">
 								<h4 class="login-title">Đăng nhập</h4>
 								<div class="login-form">
 									<div class="row">
 										<div class="col-md-12 col-12 mb--20">
-											<label>Tên đăng nhâp hoặc địa chỉ Email</label>
-											<input class="mb-0" type="email" >
+											<label>Tên đăng nhâp</label>
+											<input class="mb-0" type="text" name="user" >
+											<p id="error_email" style="color: red;"></p>
 										</div>
 										<div class="col-12 mb--20">
 											<label>Mật Khẩu</label>
-											<input class="mb-0" type="password" >
+											<input class="mb-0" type="password" name="password" >
 										</div>
 										<div class="col-md-12">
 											<div class="d-flex align-items-center flex-wrap">
-												<a href="../Theme/ad_index.html" class="btn btn-black   me-3">Đăng Nhập</a>
+												<button class="btn btn-black me-3" type="submit">Đăng nhập</button>
 												<div class="d-inline-flex align-items-center">
-													<input type="checkbox" id="accept_terms" class="mb-0 me-1">
+													<input type="checkbox" id="accept_terms" class="mb-0 me-1" value="1" name="remember">
 													<label for="accept_terms" class="mb-0 font-weight-400">Lưu đăng nhâp</label>
 												</div>
 											</div>
-											<p><a href="forgot-password.html" class="pass-lost mt-3">Quên mật khẩu?</a></p>
+											<p><a href="forgetpass" class="pass-lost mt-3">Quên mật khẩu?</a></p>
 										</div>
 									</div>
 								</div>
 							</form>
 						</div>
-
+						<div class="col-sm-12 col-md-12 col-lg-6 col-xs-12" style="position: inherit">
+							<h4 class="login-title">Đăng kí</h4>
+							<div class="login-form">
+								<div class="col-12 mb--20">
+									<p>Nếu bạn chưa có tài khoản hãy nhấn vào nút bên dưới để tạo cho mình một tài khoản riêng</p>
+								</div>
+								<div class="col-md-12">
+									<a href="register.jsp" class="btn btn-black">Đăng kí tài khoản</a>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</main>
