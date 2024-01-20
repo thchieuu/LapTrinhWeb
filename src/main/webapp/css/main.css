@@ -5942,6 +5942,7 @@ h6 {
 
 .normal-slider .slick-slide {
     padding: 11.5px;
+    height: auto;
 }
 
 @media (min-width: 480px) {
