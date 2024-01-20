@@ -3,7 +3,7 @@ package project.db;
 import java.sql.*;
 
 public class DBConnect {
-    String url = "jdbc:mysql://localhost:3306/shop";
+    String url = "jdbc:mysql://localhost:3306/web";
     String user = "root";
     String pass = "";
     Connection conn;
@@ -37,7 +37,7 @@ public class DBConnect {
         Statement statement = DBConnect.getInstall().get();
         if (statement != null)
             try {
-                ResultSet rs = statement.executeQuery("select * from product");
+                ResultSet rs = statement.executeQuery("select * from users");
                 rs.last();
                 System.out.println(rs.getRow());
                 rs.beforeFirst();

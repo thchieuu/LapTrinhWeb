@@ -1,3 +1,5 @@
+<%@ page import="project.model.User" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: LENOVO
@@ -5,7 +7,9 @@
   Time: 6:25 PM
   To change this template use File | Settings | File Templates.
 --%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <header class="header petmark-header-1">
     <div class="header-wrapper">
         <!-- Site Wrapper Starts -->
@@ -15,12 +19,20 @@
                     <div class="col-sm-6 text-center text-sm-start">
 
                         <ul class="header-links">
-                            <li>
-                                <a href="login.html"><i class="fas fa-user"></i> Đăng Nhập</a>
-                            </li>
-                            <li>
-                                <a href="register.html"><i class="fas fa-user"></i> Đăng Ký</a>
-                            </li>
+                            <%
+                                User ac = (User) request.getSession().getAttribute("user");
+                                if (ac == null) {
+
+                            %>
+                                <li><a href="login.jsp"><i class="fas fa-user"></i> Đăng nhập hoặc đăng ký</a></li>
+                            <%}%>
+                            <% if (ac != null){
+
+                            %>
+                            <li><a href="profile"><i class="fas fa-user"></i><%=ac.getNameU()%></a></li>
+
+                                <li><a href="logout"><i class="fas fa-sign-out-alt"></i> Đăng xuất </a></li>
+                          <%  }%>
                         </ul>
                         <div class="call-widget">
                             <p>Liên hệ : <i class="icon ion-ios-telephone"></i><span
@@ -69,7 +81,7 @@
                             <!-- Mainmenu Start -->
                             <ul class="mainmenu">
                                 <li class="mainmenu__item ">
-                                    <a href="index.html" class="mainmenu__link">Trang chủ</a>
+                                    <a href="home" class="mainmenu__link">Trang chủ</a>
                                 </li>
                                 <li class="mainmenu__item ">
                                     <a href="shop-left-sidebar.html" class="mainmenu__link"> Sản phẩm</a>
@@ -86,7 +98,6 @@
                                 <li class="mainmenu__item ">
                                     <a href="cart.html" class="mainmenu__link">Giỏ hàng</a>
                                 </li>
-
 
 
                             </ul>
