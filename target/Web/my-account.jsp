@@ -1,3 +1,5 @@
+<%@ page import="project.model.User" %>
+<%@ page import="project.service.LoginService" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en">
 	<head>
@@ -16,11 +18,14 @@
 			<nav aria-label="breadcrumb" class="breadcrumb-wrapper">
 				<div class="container">
 					<ol class="breadcrumb">
-						<li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
+						<li class="breadcrumb-item"><a href="home">Trang chủ</a></li>
 						<li class="breadcrumb-item active" aria-current="page">Tài khoản của tôi</li>
 					</ol>
 				</div>
 			</nav>
+			<% User u1 = (User) request.getSession().getAttribute("user");
+				User u2 = LoginService.getAccoutById(String.valueOf(u1.getId()));
+			%>
 			<div class="page-section sp-inner-page">
 				<div class="container">
 					<div class="row">
@@ -48,7 +53,7 @@
 											<div class="myaccount-content">
 												<h3>Bộ điều khiển</h3>
 												<div class="welcome mb-20">
-													<p>Xin chào, <strong>Nguyễn Văn A</strong> (Nếu không phải <strong>A !</strong><a href="login-register.html" class="logout"> Đăng xuất</a>)</p>
+													<p>Xin chào, <strong><%u1.getNameU();%></strong> </p>
 												</div>
 												<p class="mb-0">Từ Bảng điều khiển, bạn có thể dễ dàng kiểm tra và xem các đơn đặt hàng gần đây, quản lý địa chỉ giao hàng và thanh toán cũng như chỉnh sửa mật khẩu và chi tiết tài khoản của mình.
 												</p>
@@ -116,25 +121,45 @@
 										<!-- Single Tab Content Start -->
 										<div class="tab-pane fade" id="account-info" role="tabpanel">
 											<div class="myaccount-content">
-												<h3>Cập nhật Thông tin</h3>
+												<h3 style="text-align: center">Cập nhật Thông tin</h3>
+												<% String mess = (String) request.getAttribute("mess");
+													if (mess != null) {%>
+												<div class="alert-danger"
+													 style="
+                        color: white;
+                        background-color: #b6d4fe;
+                        font-size: 16px;
+                        font-weight: 600;
+                        padding: 10px;
+                        margin-bottom: 15px;
+                        border-radius: 5px;">
+													<%= mess %>
+												</div>
+												<%}%>
 												<div class="account-details-form">
-													<form action="#">
+													<form action="editprofile" method="post" id="myForm">
 														<div class="row">
-															<div class="col-lg-6 col-12 mb-30">
-																<input id="full-name" placeholder="Họ và Tên Đệm" type="text">
-															</div>
-
 															<div class="col-12 mb-30">
-																<input id="sex" placeholder="Giới tính" type="sex">
+																<input id="first-name" placeholder="Họ và Tên" type="text" name="fullname" required>
 															</div>
 															<div class="col-12 mb-30">
-																<input id="birthDate" placeholder="Ngày sinh" type="birthDate">
+																<input id="display-name" placeholder="Tên đăng nhập" type="text" name="username" required>
+															</div>
+															<div class="col-12 mb-30">
+																<input id="email" placeholder="Địa chỉ Email" type="email" name="email" required>
+																<p id="error_email" style="color: red;"></p>
+															</div>
+															<div class="col-12 mb-30">
+																<input id="phone" placeholder="Số điện thoại" type="text" name="phone" required>
+																<p id="error_phone" style="color: red;"></p>
+															</div>
+															<div class="col-12 mb-30">
+																<input id="address" placeholder="Địa chỉ" type="text" name="address" required>
+															</div>
+															<div class="col-12" style="text-align: center">
+																<button class="btn btn-black" type="submit">Lưu Thay đổi</button>
 															</div>
 
-
-															<div class="col-12">
-																<button class="theme-btn">Lưu Thay đổi</button>
-															</div>
 														</div>
 													</form>
 												</div>
@@ -183,5 +208,40 @@
 	<script src="js/plugins.js"></script>
 	<script src="js/ajax-mail.js"></script>
 	<script src="js/custom.js"></script>
+		<script>
+			$(document).ready(function() {
+				function validatePhone(txtPhone) {
+					var filter = /^[0-9-+]+$/;
+					if (filter.test(txtPhone + "") && txtPhone.length >= 10 && txtPhone.length < 12) {
+						return true;
+					} else {
+						return false;
+					}
+				}
+				function validateEmail(sEmail) {
+					var filter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+					if (filter.test(sEmail)) {
+						return true;
+					} else {
+						return false;
+					}
+				}
+				$('#myForm').bind({
+					'submit': function() {
+						if (!validateEmail($('#email').val())) {
+							$('#error_email').html('Email bạn nhập không phù hợp!!!');
+							return false;
+						}
+
+						if (!validatePhone($('#phone').val())) {
+							$('#error_phone').html('Số điện thoại bạn nhập vào không phù hợp!!!');
+							return false;
+						}
+
+						return true;
+					}
+				});
+			});
+		</script>
 </body>
 </html>

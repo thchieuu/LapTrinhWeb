@@ -30,6 +30,17 @@ public class LoginService {
 
         return null;
     }
+    public static User getAccoutById(String id) {
+        List<User> accounts = JDBiConnector.me().withHandle(h ->
+                h.createQuery("SELECT * FROM users WHERE id = ? ")
+                        .bind(0, id)
+                        .mapToBean(User.class)
+                        .stream()
+                        .collect(Collectors.toList())
+        );
+        if (accounts.size() == 0) return null;
+        return accounts.get(0);
+    }
     public static User checkAccount(String userName) {
         List<User> accounts = JDBiConnector.me().withHandle(h ->
                 h.createQuery("SELECT * FROM users WHERE userName = ?")
