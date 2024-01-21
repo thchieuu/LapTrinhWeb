@@ -32,32 +32,74 @@
             <div class="row">
 
                 <div class="col-sm-12 col-md-12 col-lg-6 col-xs-12">
-                    <form action="https://htmldemo.net/petmark/petmark/">
-                        <h4 class="login-title">Đăng ký</h4>
+                    <form action="register" method="post" id="myForm">
+                        <% String mess = (String) request.getAttribute("mess1");
+                            if (mess != null) {%>
+                        <div class="alert-danger"
+                             style="
+                        color: white;
+                        background-color: #ff0000;
+                        font-size: 16px;
+                        font-weight: 600;
+                        padding: 10px;
+                        margin-bottom: 15px;
+                        border-radius: 5px;">
+                            <%= mess %>
+                        </div>
+                        <%}%>
+                        <% String mess2 = (String) request.getAttribute("mess2");
+                            if (mess2 != null) {%>
+                        <div class="alert-danger"
+                             style="
+                        color: white;
+                        background-color: #ff0000;
+                        font-size: 16px;
+                        font-weight: 600;
+                        padding: 10px;
+                        margin-bottom: 15px;
+                        border-radius: 5px;">
+                            <%= mess2 %>
+                        </div>
+                        <%}%>
+                        <h4 class="login-title" style="text-align: center">Đăng ký</h4>
                         <div class="login-form">
                             <div class="row">
                                 <div class="col-md-12 col-12 mb--20">
-                                    <label>Họ Và Tên</label>
-                                    <input class="mb-0" type="email">
+                                    <label>Họ tên*</label>
+                                    <input class="mb-0" type="text" name = "full-name" required>
+                                </div>
+                                <div class="col-md-12 col-12 mb--20">
+                                    <label>Địa chỉ Email*</label>
+                                    <input class="mb-0" id="email" type="text" name="email" required>
+                                    <p id="error_email" style="color: red;"></p>
+                                </div>
+                                <div class="col-md-12 col-12 mb--20">
+                                    <label>Ngày tháng năm sinh</label>
+                                    <input type="date" id="start" name="date" value="2024-01-22" min="1900-01-01" max="2024-12-31" />
+                                </div>
+                                <div class="col-md-12 col-12 mb--20">
+                                    <label>Tên đăng nhập*</label>
+                                    <input class="mb-0" type="text" name="username" required>
                                 </div>
                                 <div class="col-12 mb--20">
-                                    <label>Tên Đăng Nhập</label>
-                                    <input class="mb-0" type="password">
+                                    <label>Mật khẩu*</label>
+                                    <input class="mb-0" type="password" name="password" required>
+                                </div>
+                                <div class="col-12 mb--20">
+                                    <label>Nhập Lại Mật khẩu*</label>
+                                    <input class="mb-0" type="password" name="re-password" required>
                                 </div>
                                 <div class="col-md-12 col-12 mb--20">
-                                    <label>Email</label>
-                                    <input class="mb-0" type="email">
+                                    <label>Địa chỉ*</label>
+                                    <input class="mb-0" type="text" name="address" required>
                                 </div>
-                                <div class="col-md-12 col-12 mb--20">
-                                    <label>Mật Khẩu</label>
-                                    <input class="mb-0" type="email">
+                                <div class="col-12 mb--20">
+                                    <label>Số điện thoại*</label>
+                                    <input class="mb-0" type="text" name="phone" id="phone" required>
+                                    <p id="error_phone" style="color: red;"></p>
                                 </div>
-                                <div class="col-md-12 col-12 mb--20">
-                                    <label>Số Điện Thoại</label>
-                                    <input class="mb-0" type="email">
-                                </div>
-                                <div class="col-md-12">
-                                    <a href="#" class="btn btn-black">Đăng kí</a>
+                                <div class="col-md-12" style="text-align: center">
+                                    <button class="btn btn-black" type="submit">Đăng ký</button>
                                 </div>
                             </div>
                         </div>
@@ -75,5 +117,41 @@
 <script src="js/plugins.js"></script>
 <script src="js/ajax-mail.js"></script>
 <script src="js/custom.js"></script>
+<script>
+    $(document).ready(function() {
+        function validatePhone(txtPhone) {
+            var filter = /^[0-9-+]+$/;
+            if (filter.test(txtPhone + "") && txtPhone.length >= 10 && txtPhone.length < 12) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        function validateEmail(sEmail) {
+            var filter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+            if (filter.test(sEmail)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        $('#myForm').bind({
+            'submit': function() {
+                if (!validateEmail($('#email').val())) {
+                    $('#error_email').html('Email bạn nhập không phù hợp!!!');
+                    return false;
+                }
+
+                if (!validatePhone($('#phone').val())) {
+                    $('#error_phone').html('Số điện thoại bạn nhập vào không phù hợp!!!');
+                    return false;
+                }
+
+                return true;
+            }
+        });
+    });
+</script>
+
 </body>
 </html>

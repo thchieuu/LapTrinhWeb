@@ -2,7 +2,6 @@ package project.model;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
-import java.util.Date;
 
 public class User implements Serializable {
     int id;
@@ -10,8 +9,10 @@ public class User implements Serializable {
     String userName;
     String passwordU;
     String nameU;
-    String sex;
-    Date birthDate;
+
+    String birthDate;
+    String address;
+    String phone;
     int role;
     int statusU;
     Timestamp createDate;
@@ -20,14 +21,16 @@ public class User implements Serializable {
     public User() {
     }
 
-    public User(int id, String email, String userName, String passwordU, String nameU, String sex, Date birthDate, int role, int statusU, Timestamp createDate, Timestamp updateDate) {
+    public User(int id, String email, String userName, String passwordU, String nameU, String birthDate, String address, String phone, int role, int statusU, Timestamp createDate, Timestamp updateDate) {
         this.id = id;
         this.email = email;
         this.userName = userName;
         this.passwordU = passwordU;
         this.nameU = nameU;
-        this.sex = sex;
+
         this.birthDate = birthDate;
+        this.address = address;
+        this.phone = phone;
         this.role = role;
         this.statusU = statusU;
         this.createDate = createDate;
@@ -74,19 +77,11 @@ public class User implements Serializable {
         this.nameU = nameU;
     }
 
-    public String getSex() {
-        return sex;
-    }
-
-    public void setSex(String sex) {
-        this.sex = sex;
-    }
-
-    public Date getBirthDate() {
+    public String getBirthDate() {
         return birthDate;
     }
 
-    public void setBirthDate(Date birthDate) {
+    public void setBirthDate(String birthDate) {
         this.birthDate = birthDate;
     }
 
@@ -122,6 +117,22 @@ public class User implements Serializable {
         this.updateDate = updateDate;
     }
 
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -130,8 +141,9 @@ public class User implements Serializable {
                 ", userName='" + userName + '\'' +
                 ", passwordU='" + passwordU + '\'' +
                 ", nameU='" + nameU + '\'' +
-                ", sex='" + sex + '\'' +
-                ", birthDate=" + birthDate +
+                ", birthDate='" + birthDate + '\'' +
+                ", address='" + address + '\'' +
+                ", phone='" + phone + '\'' +
                 ", role=" + role +
                 ", statusU=" + statusU +
                 ", createDate=" + createDate +

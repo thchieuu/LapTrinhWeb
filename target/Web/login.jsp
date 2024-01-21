@@ -37,7 +37,7 @@
                         color: white;
                         background-color: #ff0000;
                         font-size: 16px;
-                        font-weight: 900;
+                        font-weight: 600;
                         padding: 10px;
                         margin-bottom: 15px;
                         border-radius: 5px;">
