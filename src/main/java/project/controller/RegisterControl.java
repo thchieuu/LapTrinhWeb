@@ -8,7 +8,6 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
-import java.util.Date;
 
 @WebServlet(name = "RegisterControl", value = "/register")
 public class RegisterControl extends HttpServlet {
@@ -36,7 +35,7 @@ public class RegisterControl extends HttpServlet {
         } else {
             if (account == null) {
                 if (pass.equals(re_pass)) {
-                    lg.register(username, fullName, email, date, pass,address,phone);
+                    lg.register(username, fullName, email, date, Encode.enCodeMD5(pass),address,phone);
                     response.sendRedirect("login.jsp");
                 } else {
                     request.setAttribute("mess2", "Nhập lại mật khẩu sai");

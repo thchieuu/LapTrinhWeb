@@ -16,6 +16,13 @@ public static  void changeAccount(String nameU, String userName, String email, S
                     .bind(5,id)
                     .execute()
     );
-
 }
+    public static void changePass(String passwordU, String userName){
+        JDBiConnector.me().withHandle(handle ->
+                        handle.createUpdate("UPDATE users set passwordU = ? WHERE userName = ?")
+                                .bind(0,passwordU)
+                                .bind(1,userName)
+                                .execute()
+                );
+    }
 }

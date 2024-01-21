@@ -40,7 +40,8 @@
 										<a href="#payment-method" data-bs-toggle="tab"><i class="fa fa-credit-card"></i> Phương thức thanh toán</a>
 										<a href="#address-edit" data-bs-toggle="tab"><i class="fa fa-map-marker"></i> Địa chỉ thanh toán</a>
 										<a href="#account-info" data-bs-toggle="tab"><i class="fa fa-user"></i> Cập nhật tài khoản</a>
-										<a href="#account-change-password" data-bs-toggle="tab"><i class="fa fa-key"></i> Thay đổi mật khẩu</a>
+										<%--<a href="#account-change-password" data-bs-toggle="tab"><i class="fa fa-key"></i> Thay đổi mật khẩu</a>--%>
+										<a href="changepass.jsp" ><i class="fa fa-key"></i>Thay đổi mật khẩu</a>
 										<a href="logout"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
 									</div>
 								</div>
@@ -53,7 +54,7 @@
 											<div class="myaccount-content">
 												<h3>Bộ điều khiển</h3>
 												<div class="welcome mb-20">
-													<p>Xin chào, <strong><%u1.getNameU();%></strong> </p>
+													<p>Xin chào, <strong><%=u1.getNameU()%></strong> </p>
 												</div>
 												<p class="mb-0">Từ Bảng điều khiển, bạn có thể dễ dàng kiểm tra và xem các đơn đặt hàng gần đây, quản lý địa chỉ giao hàng và thanh toán cũng như chỉnh sửa mật khẩu và chi tiết tài khoản của mình.
 												</p>
@@ -109,12 +110,11 @@
 											<div class="myaccount-content">
 												<h3>Địa chỉ nhận hàng</h3>
 												<address>
-													<p><strong>Nguyễn Văn A</strong></p>
-													<p> KTX Đại học Nông Lâm TP.HCM <br>
-													Khu phố 6, P.Linh Trung, TP.Thủ Đức, TP.HCM</p>
-													<p>Điện Thoại: 0123456789</p>
+													<p><strong>Tên người nhận : <%=u1.getNameU()%></strong></p>
+													<p>Địa chỉ nhận hàng : <%=u1.getAddress()%></p>
+													<p>Số điện thoại : <%=u1.getPhone()%></p>
 												</address>
-												<a href="#" class="theme-btn"><i class="fa fa-edit"></i>Thay Đổi địa chỉ</a>
+
 											</div>
 										</div>
 										<!-- Single Tab Content End -->
@@ -166,31 +166,7 @@
 											</div>
 										</div>
 										<div class="tab-pane fade" id="account-change-password" role="tabpanel">
-											<div class="myaccount-content">
-												<h3>Thay đổi mật khẩu</h3>
-												<div class="account-details-form">
-													<form action="#">
-														<div class="row">
-															<div class="col-lg-6 col-12 mb-30">
-																<input id="password-old" placeholder="Mật khẩu cũ" type="text">
-															</div>
-
-															<div class="col-12 mb-30">
-																<input id="password-new" placeholder="Mật khẩu mới" type="text">
-															</div>
-															<div class="col-12 mb-30">
-																<input id="password-verify" placeholder="Xác nhận mật khẩu mới" type="text">
-															</div>
-
-
-															<div class="col-12">
-																<button class="theme-btn">Lưu Thay đổi</button>
-															</div>
-														</div>
-													</form>
-												</div>
-											</div>
-										</div>
+											<a href="changepass.jsp" class="btn btn-black">Thay đổi mật khẩu</a>
 										<!-- Single Tab Content End -->
 									</div>
 								</div>
@@ -226,6 +202,7 @@
 						return false;
 					}
 				}
+
 				$('#myForm').bind({
 					'submit': function() {
 						if (!validateEmail($('#email').val())) {

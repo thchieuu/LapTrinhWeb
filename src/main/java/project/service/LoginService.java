@@ -52,6 +52,17 @@ public class LoginService {
         if (accounts.size() == 0) return null;
         return accounts.get(0);
     }
+    public static User checkPass(String passwordU) {
+        List<User> accounts = JDBiConnector.me().withHandle(h ->
+                h.createQuery("SELECT * FROM users WHERE passwordU = ?")
+                        .bind(0, passwordU)
+                        .mapToBean(User.class)
+                        .stream()
+                        .collect(Collectors.toList())
+        );
+        if (accounts.size() == 0) return null;
+        return accounts.get(0);
+    }
 
     //
     public static void register(String userName, String nameU, String email, String birthDate, String passwordU, String address,String phone ) {
