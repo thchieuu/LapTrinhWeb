@@ -69,13 +69,13 @@
                             <!-- Mainmenu Start -->
                             <ul class="mainmenu">
                                 <li class="mainmenu__item ">
-                                    <a href="index.html" class="mainmenu__link">Trang chủ</a>
+                                    <a href="homepage" class="mainmenu__link">Trang chủ</a>
                                 </li>
                                 <li class="mainmenu__item ">
-                                    <a href="shop-left-sidebar.html" class="mainmenu__link"> Sản phẩm</a>
+                                    <a href="products" class="mainmenu__link"> Sản phẩm</a>
                                 </li>
                                 <li class="mainmenu__item ">
-                                    <a href="blog-list-left-sidebar.html" class="mainmenu__link">Tin tức</a>
+                                    <a href="blogs" class="mainmenu__link">Tin tức</a>
                                 </li>
                                 <li class="mainmenu__item ">
                                     <a href="contact.html" class="mainmenu__link">Liên hệ</a>

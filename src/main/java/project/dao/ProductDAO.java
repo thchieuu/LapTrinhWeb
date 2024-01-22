@@ -1,6 +1,6 @@
 package project.dao;
-import project.db.JDBiConnector;
 
+import project.db.JDBiConnector;
 import project.model.Product;
 
 import java.util.List;

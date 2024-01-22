@@ -225,7 +225,6 @@
                             <ul class="sidebar-filter-list">
                                 <li>
                                     <a href="#" data-count="(5)">Châu Á</a>
-                                    <b aria-hidden="true">Tiền vn</b>
                                 </li>
                                 <li>
                                     <a href="#" data-count="(13)">Châu ÂU</a>
