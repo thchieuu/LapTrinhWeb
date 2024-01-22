@@ -5942,6 +5942,7 @@ h6 {
 
 .normal-slider .slick-slide {
     padding: 11.5px;
+    height: auto;
 }
 
 @media (min-width: 480px) {
@@ -6727,42 +6728,42 @@ h6 {
     background-position: center;
 }
 
-.testimonial-bg {
-    background-image: url(../image/banner-images/bg-testimonial.html);
-}
+/*.testimonial-bg {*/
+/*    background-image: url(../image/banner-images/bg-testimonial.html);*/
+/*}*/
 
-.testimonial-bg-2 {
-    background-image: url(../image/banner-images/home-2__bg-testimonial.html);
-}
+/*.testimonial-bg-2 {*/
+/*    background-image: url(../image/banner-images/home-2__bg-testimonial.html);*/
+/*}*/
 
-.testimonial-bg-3 {
-    background-image: url(../image/banner-images/testimonial-bg-3.html);
-}
+/*.testimonial-bg-3 {*/
+/*    background-image: url(../image/banner-images/testimonial-bg-3.html);*/
+/*}*/
 
-.testimonial-bg-4 {
-    background-image: url(../image/banner-images/testimonial-bg-4.html);
-}
+/*.testimonial-bg-4 {*/
+/*    background-image: url(../image/banner-images/testimonial-bg-4.html);*/
+/*}*/
 
-.banner4-bg-img-1 {
-    background-image: url(../image/banner-images/banner4-bg-img-2.html);
-}
+/*.banner4-bg-img-1 {*/
+/*    background-image: url(../image/banner-images/banner4-bg-img-2.html);*/
+/*}*/
 
-/* Badge Images */
-.badge--sell-green {
-    background-image: url(../image/icons/badge-sell-3.html);
-}
+/*!* Badge Images *!*/
+/*.badge--sell-green {*/
+/*    background-image: url(../image/icons/badge-sell-3.html);*/
+/*}*/
 
-.badge--sell-red {
-    background-image: url(../image/icons/badge-sell-2.html);
-}
+/*.badge--sell-red {*/
+/*    background-image: url(../image/icons/badge-sell-2.html);*/
+/*}*/
 
-.badge--sell-chocolate {
-    background-image: url(../image/icons/badge-sell.html);
-}
+/*.badge--sell-chocolate {*/
+/*    background-image: url(../image/icons/badge-sell.html);*/
+/*}*/
 
-.badge--new {
-    background-image: url(../image/icons/badge-new.html);
-}
+/*.badge--new {*/
+/*    background-image: url(../image/icons/badge-new.html);*/
+/*}*/
 
 .service-bg-image {
     position: relative;
@@ -6774,16 +6775,16 @@ h6 {
     }
 }
 
-.service-bg-image:before {
-    content: '';
-    background-size: 100%;
-    width: 100%;
-    height: 209px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background: url(../image/bg-images/home-3/service-bg.html) no-repeat bottom;
-}
+/*.service-bg-image:before {*/
+/*    content: '';*/
+/*    background-size: 100%;*/
+/*    width: 100%;*/
+/*    height: 209px;*/
+/*    position: absolute;*/
+/*    bottom: 0;*/
+/*    left: 0;*/
+/*    background: url(../image/bg-images/home-3/service-bg.html) no-repeat bottom;*/
+/*}*/
 
 /* Forms Styles */
 .site-form .form-group {
@@ -7231,8 +7232,15 @@ h6 {
 }
 
 .category-widget .search-submit:hover {
-    background: #00b1bf(86, 167, 0, 0.8);
+);
 }
+
+.category-widget .search-submit:hover {
+}
+
+/*.category-widget .search-submit:hover {*/
+/*    background: #00b1bf(86, 167, 0, 0.8)*/
+/*}*/
 
 .category-widget .nice-select .list {
     height: 365px;
@@ -7549,7 +7557,7 @@ Category Navigation
 .category-nav__submenu {
     background: #fff;
     z-index: 99;
-    white-space: -moz-nowrap;
+    white-space:-moz-pre-wrap;
     white-space: nowrap;
     height: 0;
     min-width: 200px;
@@ -8279,7 +8287,7 @@ Category Navigation
     color: #ffff;
 }
 
-@media (max-width: 991.04) {
+@media (max-width: 991.04px) {
     .main-navigation {
         display: none;
     }
@@ -8454,7 +8462,7 @@ Category Navigation
     }
 }
 
-@media (max-width: 991.04) {
+@media (max-width: 991.04px) {
     .mainmenu li.menu-item-has-children:after {
         display: none;
     }
@@ -8486,7 +8494,7 @@ Category Navigation
         pointer-events: none;
         width: 195px;
         padding: 10px 0;
-        white-space: -moz-nowrap;
+        white-space: -moz-pre-wrap;
         white-space: nowrap;
     }
 }
@@ -8822,7 +8830,7 @@ Category Navigation
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.14);
 }
 
-@media (max-width: 991.04) {
+@media (max-width: 991.04px) {
     .sticky-header {
         padding: 1rem 0;
     }
@@ -8860,14 +8868,14 @@ Category Navigation
     }
 }
 
-@media (max-width: 991.04) {
+@media (max-width: 991.04px) {
     .sticky-header .sticky-navigation {
         -moz-flex: 1 0 100% !important;
         flex: 1 0 100% !important;
     }
 }
 
-@media (max-width: 991.04) {
+@media (max-width: 991.04px) {
     .sticky-header .sticky-navigation .sticky-menu.mainmenu {
         max-height: 40rem;
         text-align: left;
@@ -10938,7 +10946,7 @@ ul.sidebar-filter-list li.active a:before, ul.sidebar-filter-list li:hover a:bef
     color: #1a1f2b;
     font-size: .857em;
     font-weight: 500;
-    margin: 0 0 2s 5px 0;
+    margin: 0 0  5px 0;
     text-transform: uppercase;
     width: 100%;
 }
@@ -10967,7 +10975,7 @@ ul.sidebar-filter-list li.active a:before, ul.sidebar-filter-list li:hover a:bef
 }
 
 .pm-product-details .description-block .add-to-cart .count-input-block input {
-    background-attachment: #fff;
+    /*background-attachment: #fff;*/
     background: #fff;
     border: 1px solid #ececec;
     color: rgba(0, 0, 0, 0.45098);
@@ -11001,7 +11009,7 @@ ul.sidebar-filter-list li.active a:before, ul.sidebar-filter-list li:hover a:bef
 }
 
 .pm-product-details .description-block .count-input-block input {
-    background-attachment: #fff;
+    /*background-attachment: #fff;*/
     background: #fff;
     border: 1px solid #ececec;
     color: rgba(0, 0, 0, 0.45098);
@@ -11159,7 +11167,7 @@ ul.sidebar-filter-list li.active a:before, ul.sidebar-filter-list li:hover a:bef
     height: 20px !important;
     padding: 0 6px;
     color: #fff;
-    transition: ease .3s all;
+    transition: ease .3s;
 }
 
 .social-btns a i {
@@ -12423,7 +12431,7 @@ a.gallary-item:hover {
 
 @media (min-width: 480px) {
     .blog-post .blog-content footer div {
-        display: static;
+        display: flex;
         margin-bottom: 0;
     }
 }
@@ -14254,7 +14262,7 @@ a.gallary-item:hover {
 }
 
 .portfolio-area .btn-portfolio {
-    background: gray;
+    background: #4f5050;
     padding: 25px 30px;
     text-transform: uppercase;
     font-family: 'Open Sans', sans-serif;
@@ -14342,7 +14350,7 @@ a.gallary-item:hover {
 
 @media (min-width: 992px) {
     .service-about-bg {
-        background-image: url(../image/others/services/service-about-bg.jpg);
+        /*background-image: url(../image/others/services/service-about-bg.jpg);*/
         background-position-x: left;
         background-size: cover;
         background-position-y: 62%;
@@ -14655,7 +14663,7 @@ a.gallary-item:hover {
     background: #fff;
     padding-left: 20px;
     padding-right: 20px;
-    opacity: -1;
+    opacity: 0;
     transition: .4s;
     padding-top: 30px;
 }
