@@ -16,7 +16,6 @@ public class ProductController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
         doPost(request,response);
     }
-
     protected void doPost(HttpServletRequest request,HttpServletResponse response) throws ServletException,IOException{
         List<Product> all = ProductService.getInstance().getAll();
         request.setAttribute("data",all);

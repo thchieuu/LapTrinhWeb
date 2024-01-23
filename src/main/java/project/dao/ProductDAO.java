@@ -6,7 +6,6 @@ import project.model.Product;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
-
 public class ProductDAO {
     public static List<Product> getAll(){
         List<Product> products = JDBiConnector.me().withHandle(handle ->

@@ -38,50 +38,6 @@
                                 <!-- Product Gallery with Slick Slider -->
                             </div>
                         </div>
-                        <div class="col-md-6 mt-4 mt-lg-0">
-                            <div class="description-block">
-                                <div class="header-block">
-                                    <h3>Deramaxx</h3>
-                                </div>
-                                <!-- Price -->
-                                <p class="price"><span class="old-price"></span>500 VND</p>
-                                <!-- Rating Block -->
-                                <div class="rating-block d-flex  mt--10 mb--15">
-                                    <p class="rating-text"><a href="#comment-form">Chi Tiết</a></p>
-                                </div>
-                                <!-- Blog Short Description -->
-                                <div class="product-short-para">
-                                    <p>
-                                        Thuốc giảm đau cho chó Deramaxx là một loại thuốc nhai được bác sĩ thú y quy
-                                        định để giúp kiểm soát cơn đau sau phẫu thuật và viêm ở chó. Những viên thuốc có
-                                        hương vị thịt bò này giúp thú cưng uống thuốc nhanh chóng.
-                                    </p>
-                                </div>
-                                <div class="status">
-                                    <i class="fas fa-check-circle"></i>300 Trong kho
-                                </div>
-                                <!-- Amount and Thêm vào giỏ -->
-                                <form action="https://htmldemo.net/petmark/petmark/" class="add-to-cart">
-                                    <div class="count-input-block">
-                                        <input type="number" class="form-control text-center" value="1">
-                                    </div>
-                                    <div class="btn-block">
-                                        <a href="#" class="btn btn-rounded btn-outlined--primary">Thêm vào giỏ</a>
-                                    </div>
-                                </form>
-                                <!-- Sharing Block 2 -->
-                                <div class="share-block-2 mt--30">
-                                    <h4>Chia sẽ sản phẩm</h4>
-                                    <ul class="social-btns social-btns-3">
-                                        <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#" class="twitter"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#" class="google"><i class="fab fa-google-plus-g"></i></a></li>
-                                        <li><a href="#" class="pinterest"><i class="fab fa-pinterest-p"></i></a></li>
-                                        <li><a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -179,12 +135,7 @@
                                         </div>
                                         <article>
                                             <h2 class="sr-only d-none">Shop Post Articles</h2>
-                                            <p>Tiền con gà Úc được phát hành bởi thành phố Kamberra trong lãnh thổ Úc,
-                                                tiền được phát hành nhân dịp tết Đinh Dậu dành cho các nước châu Á sử
-                                                dụng Âm lịch, trong đó có Việt Nam. Tiền Kamberra có chất liệu polymer,
-                                                màu sắc tươi mới cùng kỹ thuật in ấn tuyệt hảo của Úc sẽ đem lại sự khác
-                                                biệt so với những dòng tiền lì xì khác.
-
+                                            <p><%=p.getDescription()%>
                                             </p>
                                         </article>
                                         <div class="btn-block d-flex">

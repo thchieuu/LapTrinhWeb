@@ -5,6 +5,7 @@ public class Product {
     String nameP;
     String image;
     float price;
+    String description;
 
     public int getId() {
         return id;
@@ -38,11 +39,20 @@ public class Product {
         this.price = price;
     }
 
-    public Product(int id, String nameP, String image, float price) {
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Product(int id, String nameP, String image, float price, String description) {
         this.id = id;
         this.nameP = nameP;
         this.image = image;
         this.price = price;
+        this.description = description;
     }
 
     public Product() {
@@ -55,6 +65,7 @@ public class Product {
                 ", nameP='" + nameP + '\'' +
                 ", image='" + image + '\'' +
                 ", price=" + price +
+                ", description='" + description + '\'' +
                 '}';
     }
 }
