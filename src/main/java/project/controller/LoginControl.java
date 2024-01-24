@@ -2,6 +2,7 @@ package project.controller;
 
 import project.model.User;
 import project.service.LoginService;
+import project.tool.Encode;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -22,7 +23,7 @@ public class LoginControl extends HttpServlet {
         String password = request.getParameter("password");
         //String remember = request.getParameter("remember");
         LoginService ls = new LoginService();
-        User u = ls.getAccount(username, password);
+        User u = ls.getAccount(username, Encode.enCodeMD5(password));
 
         if (u == null) {
             request.setAttribute("mess", "Sai tên đăng nhập hoặc mật khẩu");

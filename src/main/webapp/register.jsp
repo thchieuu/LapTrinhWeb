@@ -84,6 +84,7 @@
                                 <div class="col-12 mb--20">
                                     <label>Mật khẩu*</label>
                                     <input class="mb-0" type="password" name="password" required>
+                                    <p id="error_password" style="color: red;"></p>
                                 </div>
                                 <div class="col-12 mb--20">
                                     <label>Nhập Lại Mật khẩu*</label>
@@ -135,6 +136,13 @@
                 return false;
             }
         }
+        function validatePassword(password) {
+            if (password.length >= 6) {
+                return true;
+            }else{
+                return false
+            }
+        }
         $('#myForm').bind({
             'submit': function() {
                 if (!validateEmail($('#email').val())) {
@@ -144,6 +152,10 @@
 
                 if (!validatePhone($('#phone').val())) {
                     $('#error_phone').html('Số điện thoại bạn nhập vào không phù hợp!!!');
+                    return false;
+                }
+                if (!validatePassword($('#password').val())) {
+                    $('#error_password').html('Mật khẩu phải có ít nhất 6 ký tự!!!');
                     return false;
                 }
 
