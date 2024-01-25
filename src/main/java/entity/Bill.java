@@ -8,22 +8,30 @@ public class Bill {
     private String ten;
     private Timestamp ngayLap_hoaDon;
     private String diachi;
+    private String phone;
+
     private String pt_thanhToan;
     private String ghiChu;
     private double tongTien;
 
-
-
-    public Bill(int id, User nguoiDung, String ten, Timestamp ngayLap_hoaDon, String diachi, String pt_thanhToan, String ghiChu, double tongTien) {
+    public Bill(int id, User nguoiDung, String ten, Timestamp ngayLap_hoaDon, String diachi, String phone, String pt_thanhToan, String ghiChu, double tongTien) {
         this.id = id;
         this.nguoiDung = nguoiDung;
         this.ten = ten;
         this.ngayLap_hoaDon = ngayLap_hoaDon;
         this.diachi = diachi;
+        this.phone = phone;
         this.pt_thanhToan = pt_thanhToan;
         this.ghiChu = ghiChu;
         this.tongTien = tongTien;
+    }
 
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public Bill() {
