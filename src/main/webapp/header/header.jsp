@@ -1,14 +1,20 @@
-<%@ page import="project.model.User" %>
+<%@ page import="dao.DAO" %>
+<%@ page import="entity.Product" %>
+<%@ page import="dao.CartDAO" %>
+<%@ page import="java.util.List" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: LENOVO
-  Date: 12/1/2023
-  Time: 6:25 PM
-  To change this template use File | Settings | File Templates.
---%>
-
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+    DAO dao = new DAO();
+    List<Product> list = CartDAO.getGiohang();
+    int count = list.size();
+    int total =0;
+    int total1 = 0;
+for (Product p : list){
+    total1 += p.getPrice();
+}
+%>
 
 <header class="header petmark-header-1">
     <div class="header-wrapper">
@@ -17,27 +23,7 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-sm-6 text-center text-sm-start">
-
-                        <ul class="header-links">
-                            <%
-                                User ac = (User) request.getSession().getAttribute("user");
-                                if (ac == null) {
-
-                            %>
-                                <li><a href="login.jsp"><i class="fas fa-user"></i> Đăng nhập hoặc đăng ký</a></li>
-                            <%}%>
-                            <% if (ac != null){
-
-                            %>
-                            <li><a href="profile"><i class="fas fa-user"></i><%=ac.getNameU()%></a></li>
-
-                                <li><a href="logout"><i class="fas fa-sign-out-alt"></i> Đăng xuất </a></li>
-                          <%  }%>
-                        </ul>
-                        <div class="call-widget">
-                            <p>Liên hệ : <i class="icon ion-ios-telephone"></i><span
-                                    class="font-weight-mid"> 0352488427 </span></p>
-                        </div>
+                        <h6 class="font-weight-300">Chào mừng đến QCN </h6>
                     </div>
                 </div>
             </div>
@@ -48,22 +34,40 @@
                     <!-- Template Logo -->
                     <div class="col-lg-3 col-md-12 col-sm-4">
                         <div class="site-brand  text-center text-lg-start">
-                            <a href="index.html" class="brand-image">
-                                <img src="image/main-logo.png" alt="">
+                            <a href="home" class="brand-image">
+                                <img src="image/main-logo1.png" alt="">
                             </a>
                         </div>
                     </div>
                     <!-- Category With Search -->
                     <div class="col-lg-5 col-md-7 order-3 order-md-2">
-                        <form class="category-widget">
-                            <input type="text" name="search" placeholder="Tìm kiếm sản phẩm ">
-                            <button class="search-submit"><i class="fas fa-search"></i></button>
+                        <form class="category-widget" action="search" method="get">
+                            <input value="${txtS}" type="text" name="search" placeholder="Tìm kiếm sản phẩm ">
+                            <button class="search-submit" type="submit"><i class="fas fa-search"></i></button>
                         </form>
                     </div>
                     <!-- Call Login & Track of Order -->
                     <div class="col-lg-4 col-md-5 col-sm-8 order-2 order-md-3">
                         <div class="header-widget-2 text-center text-sm-end ">
-
+                            <div class="call-widget">
+                                <p>Liên hệ : <i class="icon ion-ios-telephone"></i><span
+                                        class="font-weight-mid">+84-012 345 678</span></p>
+                            </div>
+                            <ul class="header-links">
+                                <c:if test="${sessionScope.user == null}">
+                                    <li><a href="login.jsp"><i class="fas fa-user"></i> Đăng nhập hoặc
+                                        đăng ký
+                                    </a></li>
+                                </c:if>
+                                <c:if test="${sessionScope.user != null}">
+                                    <li>
+                                        <a href="profile"><i class="fas fa-user"></i> ${sessionScope.user.fullName}</a>
+                                    </li>
+                                    <li>
+                                        <a href="logout"><i class="fas fa-sign-out-alt"></i> Đăng xuất </a>
+                                    </li>
+                                </c:if>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -74,77 +78,94 @@
         <div class="container">
             <div class="header-bottom-inner">
                 <div class="row g-0">
-
                     <!-- Main Menu -->
                     <div class="col-lg-7 d-none d-lg-block">
                         <nav class="main-navigation l-widget">
                             <!-- Mainmenu Start -->
                             <ul class="mainmenu">
-                                <li class="mainmenu__item ">
+                                <li class="mainmenu__item  ">
                                     <a href="home" class="mainmenu__link">Trang chủ</a>
                                 </li>
                                 <li class="mainmenu__item ">
-                                    <a href="shop-left-sidebar.html" class="mainmenu__link"> Sản phẩm</a>
+                                    <a href="list-product" class="mainmenu__link"> Sản phẩm</a>
                                 </li>
                                 <li class="mainmenu__item ">
-                                    <a href="blog-list-left-sidebar.html" class="mainmenu__link">Tin tức</a>
+                                    <a href="introduce" class="mainmenu__link">Giới thiệu</a>
                                 </li>
                                 <li class="mainmenu__item ">
-                                    <a href="contact.html" class="mainmenu__link">Liên hệ</a>
+                                    <a href="contact" class="mainmenu__link">Liên hệ</a>
                                 </li>
                                 <li class="mainmenu__item ">
-                                    <a href="faq.html" class="mainmenu__link">Giới Thiệu</a>
+                                    <a href="cart.jsp" class="mainmenu__link">Giỏ hàng</a>
                                 </li>
                                 <li class="mainmenu__item ">
-                                    <a href="cart.html" class="mainmenu__link">Giỏ hàng</a>
+                                    <a href="blog" class="mainmenu__link">Tin tức</a>
                                 </li>
-
+                                <c:if test="${sessionScope.user.admin == 2}">
+                                    <li class="mainmenu__item ">
+                                        <a href="admin-home" class="mainmenu__link" target="_blank">Trang Admin</a>
+                                    </li>
+                                </c:if>
 
                             </ul>
                             <!-- Mainmenu End -->
                         </nav>
                     </div>
                     <!-- Cart block-->
+                    <c:if test="${sessionScope.user != null}">
                     <div class="col-lg-2 col-6 offset-6 offset-md-0 col-md-3 order-3" style="margin-left: 25%">
                         <div class="cart-widget-wrapper slide-down-wrapper">
                             <div class="cart-widget slide-down--btn">
                                 <div class="cart-icon">
                                     <i class="ion-bag"></i>
                                     <span class="cart-count-badge">
-                                                    1
-                                                </span>
+                     <%=count%>
+                      </span>
                                 </div>
                                 <div class="cart-text">
+
                                     <span class="d-block"></span>
-                                    <strong class="amount">500 VND</strong>
+                                    <strong><span class="amount"><span><fmt:formatNumber value="<%=total1%>" type="currency"
+                                                                                         currencyCode="VND"/></span></span></strong>
                                 </div>
                             </div>
+
                             <div class="slide-down--item ">
                                 <div class="cart-widget-box">
+
                                     <ul class="cart-items">
+                                        <%for (Product p : list){%>
                                         <li class="single-cart">
-                                            <a href="#" class="cart-product">
+                                            <div href="#" class="cart-product">
                                                 <div class="cart-product-img">
-                                                    <img src="img_1/1.jpg"
+                                                    <img src="<%=p.getImage()%>"
                                                          alt="Selected Products">
                                                 </div>
                                                 <div class="product-details">
-                                                    <h4 class="product-details--title"> TIỀN CON HEO KAMBERRA 2019</h4>
-                                                    <span class="product-details--price">1 x 120.000₫</span>
+                                                    <h4 class="product-details--title"><%=p.getName()%></h4>
+
+                                                    <span><fmt:formatNumber value="<%=p.getPrice()%>" type="currency"
+                                                                            currencyCode="VND"/></span>
                                                 </div>
-                                                <span class="cart-cross">x</span>
-                                            </a>
+                                                <a href="DelectProduct?id=<%=p.getId()%>"><img src="image/icon-logo/tr.jpg" class="far fa-trash-alt" style="width: 30%;height: 52%;margin-left: 65%;margin-top: 5px;"></img></a>
+                                            </div>
                                         </li>
+                                        <%
+                                        }
+                                        %>
+
                                         <li class="single-cart">
                                             <div class="cart-product__subtotal">
                                                 <span class="subtotal--title">Tổng phụ</span>
-                                                <span class="subtotal--price">500 VND</span>
+                                                <span><fmt:formatNumber value="<%=total1%>" type="currency"
+                                                                        currencyCode="VND"/></span>
                                             </div>
                                         </li>
+
                                         <li class="single-cart">
                                             <div class="cart-buttons">
-                                                <a href="cart.html" class="btn btn-outlined">Xem Giỏ</a>
-                                                <a href="checkout.html" class="btn btn-outlined">Thanh toán</a>
+                                                <a href="cart.jsp" class="btn btn-outlined">Xem Giỏ</a>
+                                                <a href="checkout.jsp" class="btn btn-outlined">Thanh toán</a>
                                             </div>
                                         </li>
                                     </ul>
@@ -152,6 +173,7 @@
                             </div>
                         </div>
                     </div>
+                    </c:if>
                     <!-- Mobile Menu -->
                     <div class="col-12 d-flex d-lg-none order-2 mobile-absolute-menu">
                         <!-- Main Mobile Menu Start -->
@@ -168,8 +190,8 @@
                 <div class="row align-items-center">
                     <div class="col-lg-3">
                         <!-- Sticky Logo Start -->
-                        <a class="sticky-logo" href="index.html">
-                            <img src="image/main-logo.png" alt="logo">
+                        <a class="sticky-logo" href="home">
+                            <img src="image/main-logo1.png" alt="logo">
                         </a>
                         <!-- Sticky Logo End -->
                     </div>
